@@ -1,0 +1,1786 @@
+Listing of compilation of file /home/admin/guile-gdb/guile-lisp/matrix/gnu/bin/pap.el
+on 2023-07-27 03:17:46 by CLISP, version 2.49.93+ (2018-02-18) (built on lcy02-amd64-055.buildd [127.0.1.1])
+;; Compiling file /home/admin/guile-gdb/guile-lisp/matrix/gnu/bin/pap.el ...
+
+Disassembly of function #:|1 39 (DEFVAR CUSTOM-DEFINE-HOOK NIL ...)-1|
+(CONST 0) = (SPECIAL CUSTOM-DEFINE-HOOK)
+(CONST 1) = CUSTOM-DEFINE-HOOK
+(CONST 2) = VARIABLE
+(CONST 3) = "Hook called after defining each customize option."
+(CONST 4) = SYSTEM::%SET-DOCUMENTATION
+0 required arguments
+0 optional arguments
+No rest parameter
+No keyword parameters
+14 byte-code instructions:
+0     (CONST&PUSH 0)                      ; (SPECIAL CUSTOM-DEFINE-HOOK)
+1     (CALLS1 98)                         ; PROCLAIM
+3     (CONST&PUSH 1)                      ; CUSTOM-DEFINE-HOOK
+4     (CALLS1&JMPIF 87 L11)               ; BOUNDP
+7     (CONST&PUSH 1)                      ; CUSTOM-DEFINE-HOOK
+8     (NIL&PUSH)
+9     (CALLS1 90)                         ; SYSTEM::SET-SYMBOL-VALUE
+11    L11
+11    (CONST&PUSH 1)                      ; CUSTOM-DEFINE-HOOK
+12    (CONST&PUSH 2)                      ; VARIABLE
+13    (CONST&PUSH 3)                      ; "Hook called after defining each customize option."
+14    (CALL 3 4)                          ; SYSTEM::%SET-DOCUMENTATION
+17    (CONST 1)                           ; CUSTOM-DEFINE-HOOK
+18    (SKIP&RET 1)
+
+Disassembly of function #:|41 44 (DEFVAR CUSTOM-DONT-INITIALIZE NIL ...)-2|
+(CONST 0) = (SPECIAL CUSTOM-DONT-INITIALIZE)
+(CONST 1) = CUSTOM-DONT-INITIALIZE
+(CONST 2) = VARIABLE
+(CONST 3) = 
+"Non-nil means `defcustom' should not initialize the variable.
+That is used for the sake of `custom-make-dependencies'.
+Users should not set it."
+(CONST 4) = SYSTEM::%SET-DOCUMENTATION
+0 required arguments
+0 optional arguments
+No rest parameter
+No keyword parameters
+14 byte-code instructions:
+0     (CONST&PUSH 0)                      ; (SPECIAL CUSTOM-DONT-INITIALIZE)
+1     (CALLS1 98)                         ; PROCLAIM
+3     (CONST&PUSH 1)                      ; CUSTOM-DONT-INITIALIZE
+4     (CALLS1&JMPIF 87 L11)               ; BOUNDP
+7     (CONST&PUSH 1)                      ; CUSTOM-DONT-INITIALIZE
+8     (NIL&PUSH)
+9     (CALLS1 90)                         ; SYSTEM::SET-SYMBOL-VALUE
+11    L11
+11    (CONST&PUSH 1)                      ; CUSTOM-DONT-INITIALIZE
+12    (CONST&PUSH 2)                      ; VARIABLE
+13    (CONST&PUSH 3)                      ; "Non-nil means `defcustom' should not initialize the variable.
+That is used for the sake of `custom-make-dependencies'.
+Users should not set it."
+14    (CALL 3 4)                          ; SYSTEM::%SET-DOCUMENTATION
+17    (CONST 1)                           ; CUSTOM-DONT-INITIALIZE
+18    (SKIP&RET 1)
+
+Disassembly of function #:|46 47 (DEFVAR CUSTOM-CURRENT-GROUP-ALIST NIL ...)-3|
+(CONST 0) = (SPECIAL CUSTOM-CURRENT-GROUP-ALIST)
+(CONST 1) = CUSTOM-CURRENT-GROUP-ALIST
+(CONST 2) = VARIABLE
+(CONST 3) = "Alist of (FILE . GROUP) indicating the current group to use for FILE."
+(CONST 4) = SYSTEM::%SET-DOCUMENTATION
+0 required arguments
+0 optional arguments
+No rest parameter
+No keyword parameters
+14 byte-code instructions:
+0     (CONST&PUSH 0)                      ; (SPECIAL ...)
+1     (CALLS1 98)                         ; PROCLAIM
+3     (CONST&PUSH 1)                      ; CUSTOM-CURRENT-GROUP-ALIST
+4     (CALLS1&JMPIF 87 L11)               ; BOUNDP
+7     (CONST&PUSH 1)                      ; CUSTOM-CURRENT-GROUP-ALIST
+8     (NIL&PUSH)
+9     (CALLS1 90)                         ; SYSTEM::SET-SYMBOL-VALUE
+11    L11
+11    (CONST&PUSH 1)                      ; CUSTOM-CURRENT-GROUP-ALIST
+12    (CONST&PUSH 2)                      ; VARIABLE
+13    (CONST&PUSH 3)                      ; "Alist of (FILE . GROUP) indicating the current group to use for FILE."
+14    (CALL 3 4)                          ; SYSTEM::%SET-DOCUMENTATION
+17    (CONST 1)                           ; CUSTOM-CURRENT-GROUP-ALIST
+18    (SKIP&RET 1)
+WARNING: in CUSTOM-INITIALIZE-DEFAULT in lines 49..65 : EVAL was called with 2
+         arguments, but it requires 1 argument.
+
+Disassembly of function #:|49 65 (DEFUN CUSTOM-INITIALIZE-DEFAULT (SYMBOL EXP) ...)-4|
+(CONST 0) = CUSTOM-INITIALIZE-DEFAULT
+(CONST 1) = SYSTEM::REMOVE-OLD-DEFINITIONS
+(CONST 2) = #<COMPILED-FUNCTION CUSTOM-INITIALIZE-DEFAULT>
+0 required arguments
+0 optional arguments
+No rest parameter
+No keyword parameters
+7 byte-code instructions:
+0     (CONST&PUSH 0)                      ; CUSTOM-INITIALIZE-DEFAULT
+1     (CALL1 1)                           ; SYSTEM::REMOVE-OLD-DEFINITIONS
+3     (CONST&PUSH 0)                      ; CUSTOM-INITIALIZE-DEFAULT
+4     (CONST&PUSH 2)                      ; #
+5     (CALLS2 156)                        ; SYSTEM::%PUTD
+7     (CONST 0)                           ; CUSTOM-INITIALIZE-DEFAULT
+8     (SKIP&RET 1)
+
+Disassembly of function CUSTOM-INITIALIZE-DEFAULT
+(CONST 0) = DEFAULT-TOPLEVEL-VALUE
+(CONST 1) = SAVED-VALUE
+(CONST 2) = EVAL
+(CONST 3) = SET-DEFAULT-TOPLEVEL-VALUE
+(CONST 4) = VOID-VARIABLE
+(CONST 5) = CONDITION-CASE
+2 required arguments
+0 optional arguments
+No rest parameter
+No keyword parameters
+21 byte-code instructions:
+0     (NIL&PUSH)
+1     (LOAD&PUSH 3)
+2     (CALL1&PUSH 0)                      ; DEFAULT-TOPLEVEL-VALUE
+4     (LOAD&PUSH 4)
+5     (LOAD&PUSH 5)
+6     (CONST&PUSH 1)                      ; SAVED-VALUE
+7     (PUSH-UNBOUND 1)
+9     (CALLS2&PUSH 158)                   ; GET
+11    (LOAD&JMPIF 0 L28)
+14    (LOAD 5)
+15    L15
+15    (STORE 0)
+16    (T&PUSH)
+17    (CALL2&PUSH 2)                      ; EVAL
+19    (CALL2&PUSH 3)                      ; SET-DEFAULT-TOPLEVEL-VALUE
+21    (CALL1&PUSH 4)                      ; VOID-VARIABLE
+23    (CALL 3 5)                          ; CONDITION-CASE
+26    (SKIP&RET 3)
+28    L28
+28    (CAR)
+29    (JMP L15)
+
+Disassembly of function #:|67 79 (DEFUN CUSTOM-INITIALIZE-SET (SYMBOL EXP) ...)-5|
+(CONST 0) = CUSTOM-INITIALIZE-SET
+(CONST 1) = SYSTEM::REMOVE-OLD-DEFINITIONS
+(CONST 2) = #<COMPILED-FUNCTION CUSTOM-INITIALIZE-SET>
+0 required arguments
+0 optional arguments
+No rest parameter
+No keyword parameters
+7 byte-code instructions:
+0     (CONST&PUSH 0)                      ; CUSTOM-INITIALIZE-SET
+1     (CALL1 1)                           ; SYSTEM::REMOVE-OLD-DEFINITIONS
+3     (CONST&PUSH 0)                      ; CUSTOM-INITIALIZE-SET
+4     (CONST&PUSH 2)                      ; #
+5     (CALLS2 156)                        ; SYSTEM::%PUTD
+7     (CONST 0)                           ; CUSTOM-INITIALIZE-SET
+8     (SKIP&RET 1)
+
+Disassembly of function CUSTOM-INITIALIZE-SET
+(CONST 0) = DEFAULT-TOPLEVEL-VALUE
+(CONST 1) = CUSTOM-SET
+(CONST 2) = SET-DEFAULT-TOPLEVEL-VALUE
+(CONST 3) = SAVED-VALUE
+2 required arguments
+0 optional arguments
+No rest parameter
+No keyword parameters
+25 byte-code instructions:
+0     (NIL&PUSH)
+1     (LOAD&PUSH 3)
+2     (CALL1&PUSH 0)                      ; DEFAULT-TOPLEVEL-VALUE
+4     (LOAD&PUSH 4)
+5     (CONST&PUSH 1)                      ; CUSTOM-SET
+6     (PUSH-UNBOUND 1)
+8     (CALLS2&JMPIF 158 L13)              ; GET
+11    (CONST&SYMBOL-FUNCTION 2)           ; SET-DEFAULT-TOPLEVEL-VALUE
+13    L13
+13    (PUSH)
+14    (LOAD&PUSH 5)
+15    (LOAD&PUSH 6)
+16    (CONST&PUSH 3)                      ; SAVED-VALUE
+17    (PUSH-UNBOUND 1)
+19    (CALLS2&PUSH 158)                   ; GET
+21    (LOAD&JMPIF 0 L33)
+24    (LOAD 6)
+25    L25
+25    (STORE 0)
+26    (CALLS1&PUSH 99)                    ; EVAL
+28    (FUNCALL&PUSH 2)
+30    (CALLSR 0 30)                       ; ERROR
+33    L33
+33    (CAR)
+34    (JMP L25)
+
+Disassembly of function #:|81 96 (DEFUN CUSTOM-INITIALIZE-RESET (SYMBOL EXP) ...)-6|
+(CONST 0) = CUSTOM-INITIALIZE-RESET
+(CONST 1) = SYSTEM::REMOVE-OLD-DEFINITIONS
+(CONST 2) = #<COMPILED-FUNCTION CUSTOM-INITIALIZE-RESET>
+0 required arguments
+0 optional arguments
+No rest parameter
+No keyword parameters
+7 byte-code instructions:
+0     (CONST&PUSH 0)                      ; CUSTOM-INITIALIZE-RESET
+1     (CALL1 1)                           ; SYSTEM::REMOVE-OLD-DEFINITIONS
+3     (CONST&PUSH 0)                      ; CUSTOM-INITIALIZE-RESET
+4     (CONST&PUSH 2)                      ; #
+5     (CALLS2 156)                        ; SYSTEM::%PUTD
+7     (CONST 0)                           ; CUSTOM-INITIALIZE-RESET
+8     (SKIP&RET 1)
+
+Disassembly of function CUSTOM-INITIALIZE-RESET
+(CONST 0) = CUSTOM-SET
+(CONST 1) = SET-DEFAULT-TOPLEVEL-VALUE
+(CONST 2) = DEFAULT-TOPLEVEL-VALUE
+(CONST 3) = CUSTOM-GET
+(CONST 4) = SAVED-VALUE
+2 required arguments
+0 optional arguments
+No rest parameter
+No keyword parameters
+38 byte-code instructions:
+0     (LOAD&PUSH 2)
+1     (CONST&PUSH 0)                      ; CUSTOM-SET
+2     (PUSH-UNBOUND 1)
+4     (CALLS2&JMPIF 158 L9)               ; GET
+7     (CONST&SYMBOL-FUNCTION 1)           ; SET-DEFAULT-TOPLEVEL-VALUE
+9     L9
+9     (PUSH)
+10    (LOAD&PUSH 3)
+11    (NIL&PUSH)
+12    (LOAD&PUSH 5)
+13    (CALL1&PUSH 2)                      ; DEFAULT-TOPLEVEL-VALUE
+15    (LOAD&PUSH 6)
+16    (CONST&PUSH 3)                      ; CUSTOM-GET
+17    (PUSH-UNBOUND 1)
+19    (CALLS2&PUSH 158)                   ; GET
+21    (LOAD&JMPIF 0 L44)
+24    (LOAD 1)
+25    L25
+25    (SKIP 1)
+27    (STORE 0)
+28    (LOAD&PUSH 6)
+29    (CONST&PUSH 4)                      ; SAVED-VALUE
+30    (PUSH-UNBOUND 1)
+32    (CALLS2&PUSH 158)                   ; GET
+34    (LOAD&JMPIF 0 L50)
+37    (LOAD 6)
+38    L38
+38    (STORE 0)
+39    (CALLS1&PUSH 99)                    ; EVAL
+41    (CALLSR 0 30)                       ; ERROR
+44    L44
+44    (PUSH)
+45    (LOAD&PUSH 8)
+46    (FUNCALL 1)
+48    (JMP L25)
+50    L50
+50    (CAR)
+51    (JMP L38)
+
+Disassembly of function #:|98 116 (DEFUN CUSTOM-INITIALIZE-CHANGED (SYMBOL EXP) ...)-7|
+(CONST 0) = CUSTOM-INITIALIZE-CHANGED
+(CONST 1) = SYSTEM::REMOVE-OLD-DEFINITIONS
+(CONST 2) = #<COMPILED-FUNCTION CUSTOM-INITIALIZE-CHANGED>
+0 required arguments
+0 optional arguments
+No rest parameter
+No keyword parameters
+7 byte-code instructions:
+0     (CONST&PUSH 0)                      ; CUSTOM-INITIALIZE-CHANGED
+1     (CALL1 1)                           ; SYSTEM::REMOVE-OLD-DEFINITIONS
+3     (CONST&PUSH 0)                      ; CUSTOM-INITIALIZE-CHANGED
+4     (CONST&PUSH 2)                      ; #
+5     (CALLS2 156)                        ; SYSTEM::%PUTD
+7     (CONST 0)                           ; CUSTOM-INITIALIZE-CHANGED
+8     (SKIP&RET 1)
+
+Disassembly of function CUSTOM-INITIALIZE-CHANGED
+(CONST 0) = DEFAULT-TOPLEVEL-VALUE
+(CONST 1) = CUSTOM-SET
+(CONST 2) = SET-DEFAULT-TOPLEVEL-VALUE
+(CONST 3) = CUSTOM-GET
+(CONST 4) = SAVED-VALUE
+(CONST 5) = SET-DEFAULT
+2 required arguments
+0 optional arguments
+No rest parameter
+No keyword parameters
+54 byte-code instructions:
+0     (NIL&PUSH)
+1     (LOAD&PUSH 3)
+2     (CALL1&PUSH 0)                      ; DEFAULT-TOPLEVEL-VALUE
+4     (LOAD&PUSH 4)
+5     (CONST&PUSH 1)                      ; CUSTOM-SET
+6     (PUSH-UNBOUND 1)
+8     (CALLS2&JMPIF 158 L13)              ; GET
+11    (CONST&SYMBOL-FUNCTION 2)           ; SET-DEFAULT-TOPLEVEL-VALUE
+13    L13
+13    (PUSH)
+14    (LOAD&PUSH 5)
+15    (LOAD&PUSH 6)
+16    (CONST&PUSH 3)                      ; CUSTOM-GET
+17    (PUSH-UNBOUND 1)
+19    (CALLS2&PUSH 158)                   ; GET
+21    (LOAD&JMPIF 0 L46)
+24    (LOAD 3)
+25    L25
+25    (STORE 0)
+26    (FUNCALL 2)
+28    (STORE 0)
+29    (LOAD&PUSH 4)
+30    (CONST&PUSH 4)                      ; SAVED-VALUE
+31    (PUSH-UNBOUND 1)
+33    (CALLS2&JMPIF 158 L52)              ; GET
+36    (LOAD&PUSH 4)
+37    (LOAD&PUSH 4)
+38    (CALLS1&PUSH 99)                    ; EVAL
+40    (CALL2 5)                           ; SET-DEFAULT
+42    L42
+42    (PUSH)
+43    (CALLSR 0 30)                       ; ERROR
+46    L46
+46    (PUSH)
+47    (LOAD&PUSH 8)
+48    (FUNCALL 1)
+50    (JMP L25)
+52    L52
+52    (LOAD&PUSH 4)
+53    (CONST&PUSH 1)                      ; CUSTOM-SET
+54    (PUSH-UNBOUND 1)
+56    (CALLS2&JMPIF 158 L61)              ; GET
+59    (CONST&SYMBOL-FUNCTION 2)           ; SET-DEFAULT-TOPLEVEL-VALUE
+61    L61
+61    (PUSH)
+62    (LOAD&PUSH 5)
+63    (LOAD&PUSH 6)
+64    (CONST&PUSH 4)                      ; SAVED-VALUE
+65    (PUSH-UNBOUND 1)
+67    (CALLS2 158)                        ; GET
+69    (CAR&PUSH)
+70    (CALLS1&PUSH 99)                    ; EVAL
+72    (FUNCALL 2)
+74    (JMP L42)
+
+Disassembly of function #:|118 119 (DEFVAR CUSTOM-DELAYED-INIT-VARIABLES NIL ...)-8|
+(CONST 0) = (SPECIAL CUSTOM-DELAYED-INIT-VARIABLES)
+(CONST 1) = CUSTOM-DELAYED-INIT-VARIABLES
+(CONST 2) = VARIABLE
+(CONST 3) = "List of variables whose initialization is pending."
+(CONST 4) = SYSTEM::%SET-DOCUMENTATION
+0 required arguments
+0 optional arguments
+No rest parameter
+No keyword parameters
+14 byte-code instructions:
+0     (CONST&PUSH 0)                      ; (SPECIAL ...)
+1     (CALLS1 98)                         ; PROCLAIM
+3     (CONST&PUSH 1)                      ; CUSTOM-DELAYED-INIT-VARIABLES
+4     (CALLS1&JMPIF 87 L11)               ; BOUNDP
+7     (CONST&PUSH 1)                      ; CUSTOM-DELAYED-INIT-VARIABLES
+8     (NIL&PUSH)
+9     (CALLS1 90)                         ; SYSTEM::SET-SYMBOL-VALUE
+11    L11
+11    (CONST&PUSH 1)                      ; CUSTOM-DELAYED-INIT-VARIABLES
+12    (CONST&PUSH 2)                      ; VARIABLE
+13    (CONST&PUSH 3)                      ; "List of variables whose initialization is pending."
+14    (CALL 3 4)                          ; SYSTEM::%SET-DOCUMENTATION
+17    (CONST 1)                           ; CUSTOM-DELAYED-INIT-VARIABLES
+18    (SKIP&RET 1)
+WARNING: in CUSTOM-INITIALIZE-DELAY in lines 121..142 : variable _VALUE is not
+         used.
+         Misspelled or missing IGNORE declaration?
+
+Disassembly of function #:|121 142 (DEFUN CUSTOM-INITIALIZE-DELAY (SYMBOL _VALUE) ...)-9|
+(CONST 0) = CUSTOM-INITIALIZE-DELAY
+(CONST 1) = SYSTEM::REMOVE-OLD-DEFINITIONS
+(CONST 2) = #<COMPILED-FUNCTION CUSTOM-INITIALIZE-DELAY>
+0 required arguments
+0 optional arguments
+No rest parameter
+No keyword parameters
+7 byte-code instructions:
+0     (CONST&PUSH 0)                      ; CUSTOM-INITIALIZE-DELAY
+1     (CALL1 1)                           ; SYSTEM::REMOVE-OLD-DEFINITIONS
+3     (CONST&PUSH 0)                      ; CUSTOM-INITIALIZE-DELAY
+4     (CONST&PUSH 2)                      ; #
+5     (CALLS2 156)                        ; SYSTEM::%PUTD
+7     (CONST 0)                           ; CUSTOM-INITIALIZE-DELAY
+8     (SKIP&RET 1)
+
+Disassembly of function CUSTOM-INITIALIZE-DELAY
+(CONST 0) = CUSTOM-DELAYED-INIT-VARIABLES
+2 required arguments
+0 optional arguments
+No rest parameter
+No keyword parameters
+reads special variable: CUSTOM-DELAYED-INIT-VARIABLES
+writes special variable: CUSTOM-DELAYED-INIT-VARIABLES
+5 byte-code instructions:
+0     (LOAD&PUSH 2)
+1     (GETVALUE 0)                        ; CUSTOM-DELAYED-INIT-VARIABLES
+3     (CONS)
+4     (SETVALUE 0)                        ; CUSTOM-DELAYED-INIT-VARIABLES
+6     (SKIP&RET 3)
+
+Disassembly of function #:|144 213 (DEFUN CUSTOM-DECLARE-VARIABLE (SYMBOL DEFAULT DOC ...) ...)-10|
+(CONST 0) = CUSTOM-DECLARE-VARIABLE
+(CONST 1) = SYSTEM::REMOVE-OLD-DEFINITIONS
+(CONST 2) = #<COMPILED-FUNCTION CUSTOM-DECLARE-VARIABLE>
+0 required arguments
+0 optional arguments
+No rest parameter
+No keyword parameters
+7 byte-code instructions:
+0     (CONST&PUSH 0)                      ; CUSTOM-DECLARE-VARIABLE
+1     (CALL1 1)                           ; SYSTEM::REMOVE-OLD-DEFINITIONS
+3     (CONST&PUSH 0)                      ; CUSTOM-DECLARE-VARIABLE
+4     (CONST&PUSH 2)                      ; #
+5     (CALLS2 156)                        ; SYSTEM::%PUTD
+7     (CONST 0)                           ; CUSTOM-DECLARE-VARIABLE
+8     (SKIP&RET 1)
+
+Disassembly of function CUSTOM-DECLARE-VARIABLE
+(CONST 0) = STANDARD-VALUE
+(CONST 1) = PURECOPY
+(CONST 2) = PUT
+(CONST 3) = FORCE-VALUE
+(CONST 4) = "Doc string is missing"
+(CONST 5) = CUSTOM-INITIALIZE-RESET
+(CONST 6) = :GROUP
+(CONST 7) = MEMQ
+(CONST 8) = CUSTOM-CURRENT-GROUP
+(CONST 9) = CUSTOM-VARIABLE
+(CONST 10) = CUSTOM-ADD-TO-GROUP
+(CONST 11) = "Junk in args %S"
+(CONST 12) = "Keyword %s is missing an argument"
+(CONST 13) = :INITIALIZE
+(CONST 14) = :SET
+(CONST 15) = CUSTOM-SET
+(CONST 16) = :GET
+(CONST 17) = CUSTOM-GET
+(CONST 18) = :REQUIRE
+(CONST 19) = :RISKY
+(CONST 20) = RISKY-LOCAL-VARIABLE
+(CONST 21) = :SAFE
+(CONST 22) = SAFE-LOCAL-VARIABLE
+(CONST 23) = :LOCAL
+(CONST 24) = (T PERMANENT)
+(CONST 25) = PERMANENT
+(CONST 26) = PERMANENT-LOCAL
+(CONST 27) = :TYPE
+(CONST 28) = CUSTOM-TYPE
+(CONST 29) = :OPTIONS
+(CONST 30) = CUSTOM-OPTIONS
+(CONST 31) = CUSTOM-ADD-OPTION
+(CONST 32) = COPY-SEQUENCE
+(CONST 33) = CUSTOM-HANDLE-KEYWORD
+(CONST 34) = WHILE
+(CONST 35) = INTERNAL--DEFINE-UNINITIALIZED-VARIABLE
+(CONST 36) = CUSTOM-REQUESTS
+(CONST 37) = CUSTOM-DONT-INITIALIZE
+(CONST 38) = MAKE-VARIABLE-BUFFER-LOCAL
+(CONST 39) = CUSTOM-DEFINE-HOOK
+(CONST 40) = RUN-HOOKS
+3 required arguments
+0 optional arguments
+Rest parameter
+No keyword parameters
+reads special variable: CUSTOM-DONT-INITIALIZE
+178 byte-code instructions:
+0     (LOAD&PUSH 4)
+1     (CONST&PUSH 0)                      ; STANDARD-VALUE
+2     (LOAD&PUSH 5)
+3     (LIST&PUSH 1)
+5     (CALL1&PUSH 1)                      ; PURECOPY
+7     (CALL 3 2)                          ; PUT
+10    (LOAD&PUSH 4)
+11    (CONST&PUSH 3)                      ; FORCE-VALUE
+12    (PUSH-UNBOUND 1)
+14    (CALLS2&JMPIFNOT 158 L23)           ; GET
+17    (LOAD&PUSH 4)
+18    (CONST&PUSH 3)                      ; FORCE-VALUE
+19    (NIL&PUSH)
+20    (CALL 3 2)                          ; PUT
+23    L23
+23    (LOAD&PUSH 2)
+24    (CALLS2&JMPIF 168 L62)              ; KEYWORDP
+27    (CONST&SYMBOL-FUNCTION&PUSH 5)      ; CUSTOM-INITIALIZE-RESET
+29    (PUSH-NIL 2)
+31    (CONST&PUSH 6)                      ; :GROUP
+32    (LOAD&PUSH 5)
+33    (CALL2&JMPIF 7 L44)                 ; MEMQ
+36    (CALL0 8)                           ; CUSTOM-CURRENT-GROUP
+38    (PUSH)
+39    (LOAD&PUSH 8)
+40    (CONST&PUSH 9)                      ; CUSTOM-VARIABLE
+41    (CALL 3 10)                         ; CUSTOM-ADD-TO-GROUP
+44    L44
+44    (LOAD&PUSH 4)
+45    (LOAD&CAR&PUSH 5)
+47    (LOAD&CDR&STORE 6)
+49    (LOAD&PUSH 0)
+50    (CALLS2&JMPIFNOT 24 L66)            ; SYMBOLP
+53    (LOAD&JMPIF 6 L93)
+56    (CONST&PUSH 12)                     ; "Keyword %s is missing an argument"
+57    (LOAD 1)
+58    L58
+58    (PUSH)
+59    (CALLSR 1 30)                       ; ERROR
+62    L62
+62    (CONST&PUSH 4)                      ; "Doc string is missing"
+63    (CALLSR 0 30)                       ; ERROR
+66    L66
+66    (CONST&PUSH 11)                     ; "Junk in args %S"
+67    (LOAD 7)
+68    (JMP L58)
+70    L70
+70    (LOAD 0)
+71    (STORE 5)
+72    (JMP L226)
+75    L75
+75    (LOAD&PUSH 10)
+76    (CONST 15)                          ; CUSTOM-SET
+77    (JMP L124)
+79    L79
+79    (LOAD&PUSH 10)
+80    (CONST 17)                          ; CUSTOM-GET
+81    (JMP L124)
+83    L83
+83    (LOAD&PUSH 0)
+84    (LOAD&CONS&STORE 4)
+86    (JMP L226)
+89    L89
+89    (LOAD&PUSH 10)
+90    (CONST 20)                          ; RISKY-LOCAL-VARIABLE
+91    (JMP L124)
+93    L93
+93    (LOAD&CAR&PUSH 6)
+95    (LOAD&CDR&STORE 7)
+97    (LOAD&PUSH 1)
+98    (JMPIFEQTO 13 L70)                  ; :INITIALIZE
+101   (LOAD&PUSH 1)
+102   (JMPIFEQTO 14 L75)                  ; :SET
+105   (LOAD&PUSH 1)
+106   (JMPIFEQTO 16 L79)                  ; :GET
+109   (LOAD&PUSH 1)
+110   (JMPIFEQTO 18 L83)                  ; :REQUIRE
+113   (LOAD&PUSH 1)
+114   (JMPIFEQTO 19 L89)                  ; :RISKY
+117   (LOAD&PUSH 1)
+118   (JMPIFNOTEQTO 21 L177)              ; :SAFE
+121   (LOAD&PUSH 10)
+122   (CONST 22)                          ; SAFE-LOCAL-VARIABLE
+124   L124
+124   (PUSH)
+125   (LOAD 2)
+126   (JMP L203)
+129   L129
+129   (LOAD&PUSH 0)
+130   (CONST&PUSH 24)                     ; (T PERMANENT)
+131   (CALL2&JMPIFNOT 7 L136)             ; MEMQ
+134   (T&STORE 3)
+136   L136
+136   (LOAD&PUSH 0)
+137   (CONST 25)                          ; PERMANENT
+139   (EQ)
+140   (JMPIFNOT L226)
+143   (LOAD&PUSH 10)
+144   (CONST&PUSH 26)                     ; PERMANENT-LOCAL
+145   (T)
+146   (JMP L203)
+148   L148
+148   (LOAD&PUSH 10)
+149   (CONST&PUSH 28)                     ; CUSTOM-TYPE
+150   (LOAD&PUSH 2)
+151   (CALL1 1)                           ; PURECOPY
+153   (JMP L203)
+155   L155
+155   (LOAD&PUSH 0)
+156   (JMP L168)
+158   L158
+158   (LOAD&CAR&PUSH 0)
+160   (LOAD&PUSH 12)
+161   (LOAD&PUSH 1)
+162   (CALL2 31)                          ; CUSTOM-ADD-OPTION
+164   (SKIP 1)
+166   (LOAD&CDR&STORE 0)
+168   L168
+168   (LOAD&PUSH 0)
+169   (CALLS1&JMPIFNOT 159 L158)          ; ENDP
+172   (SKIP 1)
+174   (LOAD 0)
+175   (JMP L226)
+177   L177
+177   (LOAD&PUSH 1)
+178   (JMPIFEQTO 23 L129)                 ; :LOCAL
+181   (LOAD&PUSH 1)
+182   (JMPIFEQTO 27 L148)                 ; :TYPE
+185   (LOAD&PUSH 1)
+186   (JMPIFNOTEQTO 29 L219)              ; :OPTIONS
+189   (LOAD&PUSH 10)
+190   (CONST&PUSH 30)                     ; CUSTOM-OPTIONS
+192   (PUSH-UNBOUND 1)
+194   (CALLS2&JMPIF 158 L155)             ; GET
+197   (LOAD&PUSH 10)
+198   (CONST&PUSH 30)                     ; CUSTOM-OPTIONS
+200   (LOAD&PUSH 2)
+201   (CALL1 32)                          ; COPY-SEQUENCE
+203   L203
+203   (PUSH)
+204   (CALL 3 2)                          ; PUT
+207   (JMP L226)
+209   L209
+209   (LOAD&PUSH 2)
+210   (LOAD&PUSH 8)
+211   (LOAD&PUSH 8)
+212   (FUNCALL 2)
+214   (LOAD&JMPIFNOT 0 L252)
+217   (JMP L249)
+219   L219
+219   (LOAD&PUSH 10)
+220   (LOAD&PUSH 2)
+221   (LOAD&PUSH 2)
+222   (CONST&PUSH 9)                      ; CUSTOM-VARIABLE
+223   (CALL 4 33)                         ; CUSTOM-HANDLE-KEYWORD
+226   L226
+226   (SKIP 1)
+228   (STORE 0)
+229   (CALL2 34)                          ; WHILE
+231   (LOAD&PUSH 7)
+232   (LOAD&PUSH 6)
+233   (CALL2 35)                          ; INTERNAL--DEFINE-UNINITIALIZED-VARIABLE
+235   (LOAD&PUSH 7)
+236   (CONST&PUSH 36)                     ; CUSTOM-REQUESTS
+238   (LOAD&PUSH 3)
+239   (CALL 3 2)                          ; PUT
+242   (GETVALUE 37)                       ; CUSTOM-DONT-INITIALIZE
+244   (JMPIFNOT L209)
+246   (LOAD&JMPIFNOT 0 L252)
+249   L249
+249   (LOAD&PUSH 7)
+250   (CALL1 38)                          ; MAKE-VARIABLE-BUFFER-LOCAL
+252   L252
+252   (SKIP 3)
+254   (CONST&PUSH 39)                     ; CUSTOM-DEFINE-HOOK
+256   (CALL1 40)                          ; RUN-HOOKS
+258   (LOAD 4)
+259   (SKIP&RET 5)
+WARNING: in DEFCUSTOM in lines 215..366 : Unknown declaration DEBUG.
+         The whole declaration will be ignored.
+WARNING: in DEFCUSTOM in lines 215..366 : Unknown declaration DOC-STRING.
+         The whole declaration will be ignored.
+WARNING: in DEFCUSTOM in lines 215..366 : LEXICAL-BINDING is neither declared
+         nor bound,
+         it will be treated as if it were declared SPECIAL.
+
+Disassembly of function #:|215 366 (DEFMACRO DEFCUSTOM (SYMBOL STANDARD DOC ...) ...)-11|
+(CONST 0) = DEFCUSTOM
+(CONST 1) = SYSTEM::REMOVE-OLD-DEFINITIONS
+(CONST 2) = #<COMPILED-FUNCTION DEFCUSTOM>
+(CONST 3) = (SYMBOL STANDARD DOC &REST ARGS)
+0 required arguments
+0 optional arguments
+No rest parameter
+No keyword parameters
+9 byte-code instructions:
+0     (CONST&PUSH 0)                      ; DEFCUSTOM
+1     (CALL1 1)                           ; SYSTEM::REMOVE-OLD-DEFINITIONS
+3     (CONST&PUSH 0)                      ; DEFCUSTOM
+4     (CONST&PUSH 2)                      ; #<COMPILED-FUNCTION DEFCUSTOM>
+5     (CONST&PUSH 3)                      ; (SYMBOL STANDARD DOC &REST ARGS)
+6     (CALLS2&PUSH 76)                    ; SYSTEM::MAKE-MACRO
+8     (CALLS2 156)                        ; SYSTEM::%PUTD
+10    (CONST 0)                           ; DEFCUSTOM
+11    (SKIP&RET 1)
+
+Disassembly of function DEFCUSTOM
+(CONST 0) = 4
+(CONST 1) = SYSTEM::LIST-LENGTH-IN-BOUNDS-P
+(CONST 2) = SYSTEM::MACRO-CALL-ERROR
+(CONST 3) = CUSTOM-DECLARE-VARIABLE
+(CONST 4) = QUOTE
+(CONST 5) = LEXICAL-BINDING
+(CONST 6) = LIST
+(CONST 7) = 'FUNCALL
+(CONST 8) = 'FUNCTION
+(CONST 9) = LAMBDA
+2 required arguments
+0 optional arguments
+No rest parameter
+No keyword parameters
+reads special variable: LEXICAL-BINDING
+57 byte-code instructions:
+0     (LOAD&PUSH 2)
+1     (CONST&PUSH 0)                      ; 4
+2     (CONST&PUSH 0)                      ; 4
+3     (T&PUSH)
+4     (CALL 4 1)                          ; SYSTEM::LIST-LENGTH-IN-BOUNDS-P
+7     (JMPIFNOT L48)
+9     (LOAD 2)
+10    (CDR)
+11    (CAR&PUSH)
+12    (LOAD 3)
+13    (CDR)
+14    (CDR)
+15    (CAR&PUSH)
+16    (LOAD 4)
+17    (CDR)
+18    (CDR)
+19    (CDR)
+20    (CAR&PUSH)
+21    (LOAD 5)
+22    (CDR)
+23    (CDR)
+24    (CDR)
+25    (CDR&PUSH)
+26    (CONST&PUSH 3)                      ; CUSTOM-DECLARE-VARIABLE
+27    (CONST&PUSH 4)                      ; QUOTE
+28    (LOAD&PUSH 5)
+29    (LIST&PUSH 2)
+31    (GETVALUE 5)                        ; LEXICAL-BINDING
+33    (JMPIF L53)
+35    (CONST&PUSH 4)                      ; QUOTE
+36    (LOAD&PUSH 5)
+37    (LIST 2)
+39    L39
+39    (PUSH)
+40    (LOAD&PUSH 4)
+41    (LOAD 4)
+42    (CONS)
+43    (CONS)
+44    (CONS)
+45    (CONS)
+46    (SKIP&RET 7)
+48    L48
+48    (LOAD&PUSH 2)
+49    (CALL1 2)                           ; SYSTEM::MACRO-CALL-ERROR
+51    (SKIP&RET 3)
+53    L53
+53    (CONST&PUSH 6)                      ; LIST
+54    (CONST&PUSH 7)                      ; 'FUNCALL
+55    (CONST&PUSH 6)                      ; LIST
+56    (CONST&PUSH 8)                      ; 'FUNCTION
+57    (CONST&PUSH 9)                      ; LAMBDA
+58    (NIL&PUSH)
+59    (LOAD&PUSH 10)
+60    (LIST&PUSH 3)
+62    (LIST&PUSH 3)
+64    (LIST 3)
+66    (JMP L39)
+WARNING: in DEFFACE in lines 368..436 : Unknown declaration DOC-STRING.
+         The whole declaration will be ignored.
+
+Disassembly of function #:|368 436 (DEFMACRO DEFFACE (FACE SPEC DOC ...) ...)-12|
+(CONST 0) = DEFFACE
+(CONST 1) = SYSTEM::REMOVE-OLD-DEFINITIONS
+(CONST 2) = #<COMPILED-FUNCTION DEFFACE>
+(CONST 3) = (FACE SPEC DOC &REST ARGS)
+0 required arguments
+0 optional arguments
+No rest parameter
+No keyword parameters
+9 byte-code instructions:
+0     (CONST&PUSH 0)                      ; DEFFACE
+1     (CALL1 1)                           ; SYSTEM::REMOVE-OLD-DEFINITIONS
+3     (CONST&PUSH 0)                      ; DEFFACE
+4     (CONST&PUSH 2)                      ; #<COMPILED-FUNCTION DEFFACE>
+5     (CONST&PUSH 3)                      ; (FACE SPEC DOC &REST ARGS)
+6     (CALLS2&PUSH 76)                    ; SYSTEM::MAKE-MACRO
+8     (CALLS2 156)                        ; SYSTEM::%PUTD
+10    (CONST 0)                           ; DEFFACE
+11    (SKIP&RET 1)
+
+Disassembly of function DEFFACE
+(CONST 0) = 4
+(CONST 1) = SYSTEM::LIST-LENGTH-IN-BOUNDS-P
+(CONST 2) = SYSTEM::MACRO-CALL-ERROR
+(CONST 3) = CUSTOM-DECLARE-FACE
+(CONST 4) = QUOTE
+2 required arguments
+0 optional arguments
+No rest parameter
+No keyword parameters
+37 byte-code instructions:
+0     (LOAD&PUSH 2)
+1     (CONST&PUSH 0)                      ; 4
+2     (CONST&PUSH 0)                      ; 4
+3     (T&PUSH)
+4     (CALL 4 1)                          ; SYSTEM::LIST-LENGTH-IN-BOUNDS-P
+7     (JMPIFNOT L41)
+9     (LOAD 2)
+10    (CDR)
+11    (CAR&PUSH)
+12    (LOAD 3)
+13    (CDR)
+14    (CDR)
+15    (CAR&PUSH)
+16    (LOAD 4)
+17    (CDR)
+18    (CDR)
+19    (CDR)
+20    (CAR&PUSH)
+21    (LOAD 5)
+22    (CDR)
+23    (CDR)
+24    (CDR)
+25    (CDR&PUSH)
+26    (CONST&PUSH 3)                      ; CUSTOM-DECLARE-FACE
+27    (CONST&PUSH 4)                      ; QUOTE
+28    (LOAD&PUSH 5)
+29    (LIST&PUSH 2)
+31    (LOAD&PUSH 4)
+32    (LOAD&PUSH 4)
+33    (LIST&PUSH 4)
+35    (LOAD&PUSH 1)
+36    (CALLSR 2 36)                       ; NCONC
+39    (SKIP&RET 7)
+41    L41
+41    (LOAD&PUSH 2)
+42    (CALL1 2)                           ; SYSTEM::MACRO-CALL-ERROR
+44    (SKIP&RET 3)
+WARNING: in CUSTOM-CURRENT-GROUP in lines 438..441 : LOAD-FILE-NAME is neither
+         declared nor bound,
+         it will be treated as if it were declared SPECIAL.
+
+Disassembly of function #:|438 441 (DEFUN CUSTOM-CURRENT-GROUP NIL ...)-13|
+(CONST 0) = CUSTOM-CURRENT-GROUP
+(CONST 1) = SYSTEM::REMOVE-OLD-DEFINITIONS
+(CONST 2) = #<COMPILED-FUNCTION CUSTOM-CURRENT-GROUP>
+0 required arguments
+0 optional arguments
+No rest parameter
+No keyword parameters
+7 byte-code instructions:
+0     (CONST&PUSH 0)                      ; CUSTOM-CURRENT-GROUP
+1     (CALL1 1)                           ; SYSTEM::REMOVE-OLD-DEFINITIONS
+3     (CONST&PUSH 0)                      ; CUSTOM-CURRENT-GROUP
+4     (CONST&PUSH 2)                      ; #
+5     (CALLS2 156)                        ; SYSTEM::%PUTD
+7     (CONST 0)                           ; CUSTOM-CURRENT-GROUP
+8     (SKIP&RET 1)
+
+Disassembly of function CUSTOM-CURRENT-GROUP
+(CONST 0) = LOAD-FILE-NAME
+(CONST 1) = CUSTOM-CURRENT-GROUP-ALIST
+0 required arguments
+0 optional arguments
+No rest parameter
+No keyword parameters
+reads special variables: CUSTOM-CURRENT-GROUP-ALIST LOAD-FILE-NAME
+6 byte-code instructions:
+0     (GETVALUE&PUSH 0)                   ; LOAD-FILE-NAME
+2     (GETVALUE&PUSH 1)                   ; CUSTOM-CURRENT-GROUP-ALIST
+4     (PUSH-UNBOUND 3)
+6     (CALLS1 200)                        ; ASSOC
+8     (CDR)
+9     (SKIP&RET 1)
+WARNING: in CUSTOM-DECLARE-GROUP in lines 443..471 : LOAD-FILE-NAME is neither
+         declared nor bound,
+         it will be treated as if it were declared SPECIAL.
+WARNING: in CUSTOM-DECLARE-GROUP in lines 443..471 : LOAD-FILE-NAME is neither
+         declared nor bound,
+         it will be treated as if it were declared SPECIAL.
+
+Disassembly of function #:|443 471 (DEFUN CUSTOM-DECLARE-GROUP (SYMBOL MEMBERS DOC ...) ...)-14|
+(CONST 0) = CUSTOM-DECLARE-GROUP
+(CONST 1) = SYSTEM::REMOVE-OLD-DEFINITIONS
+(CONST 2) = #<COMPILED-FUNCTION CUSTOM-DECLARE-GROUP>
+0 required arguments
+0 optional arguments
+No rest parameter
+No keyword parameters
+7 byte-code instructions:
+0     (CONST&PUSH 0)                      ; CUSTOM-DECLARE-GROUP
+1     (CALL1 1)                           ; SYSTEM::REMOVE-OLD-DEFINITIONS
+3     (CONST&PUSH 0)                      ; CUSTOM-DECLARE-GROUP
+4     (CONST&PUSH 2)                      ; #
+5     (CALLS2 156)                        ; SYSTEM::%PUTD
+7     (CONST 0)                           ; CUSTOM-DECLARE-GROUP
+8     (SKIP&RET 1)
+
+Disassembly of function CUSTOM-DECLARE-GROUP
+(CONST 0) = CUSTOM-ADD-TO-GROUP
+(CONST 1) = WHILE
+(CONST 2) = GROUP-DOCUMENTATION
+(CONST 3) = PURECOPY
+(CONST 4) = PUT
+(CONST 5) = "Junk in args %S"
+(CONST 6) = "Keyword %s is missing an argument"
+(CONST 7) = :PREFIX
+(CONST 8) = CUSTOM-PREFIX
+(CONST 9) = CUSTOM-GROUP
+(CONST 10) = CUSTOM-HANDLE-KEYWORD
+(CONST 11) = LOAD-FILE-NAME
+(CONST 12) = CUSTOM-CURRENT-GROUP-ALIST
+(CONST 13) = SETCDR
+(CONST 14) = CUSTOM-DEFINE-HOOK
+(CONST 15) = RUN-HOOKS
+3 required arguments
+0 optional arguments
+Rest parameter
+No keyword parameters
+reads special variables: CUSTOM-CURRENT-GROUP-ALIST LOAD-FILE-NAME
+writes special variable: CUSTOM-CURRENT-GROUP-ALIST
+74 byte-code instructions:
+0     (LOAD&PUSH 3)
+1     (CONST&SYMBOL-FUNCTION&PUSH 0)      ; CUSTOM-ADD-TO-GROUP
+3     (LOAD&PUSH 6)
+4     (LOAD 6)
+5     (CAR)
+6     (APPLY&PUSH 1)
+8     (LOAD&CDR&STORE 5)
+10    (PUSH)
+11    (CALL 3 1)                          ; WHILE
+14    (LOAD&JMPIFNOT 2 L25)
+17    (LOAD&PUSH 4)
+18    (CONST&PUSH 2)                      ; GROUP-DOCUMENTATION
+19    (LOAD&PUSH 4)
+20    (CALL1&PUSH 3)                      ; PURECOPY
+22    (CALL 3 4)                          ; PUT
+25    L25
+25    (LOAD&PUSH 1)
+26    (LOAD&CAR&PUSH 2)
+28    (LOAD&CDR&STORE 3)
+30    (LOAD&PUSH 0)
+31    (CALLS2&JMPIFNOT 24 L45)            ; SYMBOLP
+34    (LOAD&CAR&PUSH 3)
+36    (LOAD&JMPIF 4 L65)
+39    (CONST&PUSH 6)                      ; "Keyword %s is missing an argument"
+40    (LOAD 2)
+41    L41
+41    (PUSH)
+42    (CALLSR 1 30)                       ; ERROR
+45    L45
+45    (CONST&PUSH 5)                      ; "Junk in args %S"
+46    (LOAD 4)
+47    (JMP L41)
+49    L49
+49    (LOAD&PUSH 7)
+50    (CONST&PUSH 8)                      ; CUSTOM-PREFIX
+51    (LOAD&PUSH 2)
+52    (CALL1&PUSH 3)                      ; PURECOPY
+54    (CALL 3 4)                          ; PUT
+57    (JMP L78)
+59    L59
+59    (PUSH)
+60    (LOAD&PUSH 6)
+61    (CALL2 13)                          ; SETCDR
+63    (JMP L103)
+65    L65
+65    (LOAD&CDR&STORE 4)
+67    (LOAD&PUSH 1)
+68    (JMPIFEQTO 7 L49)                   ; :PREFIX
+71    (LOAD&PUSH 7)
+72    (LOAD&PUSH 2)
+73    (LOAD&PUSH 2)
+74    (CONST&PUSH 9)                      ; CUSTOM-GROUP
+75    (CALL 4 10)                         ; CUSTOM-HANDLE-KEYWORD
+78    L78
+78    (SKIP 1)
+80    (STORE 0)
+81    (CALL2 1)                           ; WHILE
+83    (GETVALUE&PUSH 11)                  ; LOAD-FILE-NAME
+85    (GETVALUE&PUSH 12)                  ; CUSTOM-CURRENT-GROUP-ALIST
+87    (PUSH-UNBOUND 3)
+89    (CALLS1&PUSH 200)                   ; ASSOC
+91    (LOAD&JMPIF 0 L59)
+94    (GETVALUE&PUSH 11)                  ; LOAD-FILE-NAME
+96    (LOAD 6)
+97    (CONS&PUSH)
+98    (GETVALUE 12)                       ; CUSTOM-CURRENT-GROUP-ALIST
+100   (CONS)
+101   (SETVALUE 12)                       ; CUSTOM-CURRENT-GROUP-ALIST
+103   L103
+103   (SKIP 1)
+105   (CONST&PUSH 14)                     ; CUSTOM-DEFINE-HOOK
+106   (CALL1 15)                          ; RUN-HOOKS
+108   (LOAD 4)
+109   (SKIP&RET 5)
+WARNING: in DEFGROUP in lines 473..500 : Unknown declaration DOC-STRING.
+         The whole declaration will be ignored.
+
+Disassembly of function #:|473 500 (DEFMACRO DEFGROUP (SYMBOL MEMBERS DOC ...) ...)-15|
+(CONST 0) = DEFGROUP
+(CONST 1) = SYSTEM::REMOVE-OLD-DEFINITIONS
+(CONST 2) = #<COMPILED-FUNCTION DEFGROUP>
+(CONST 3) = (SYMBOL MEMBERS DOC &REST ARGS)
+0 required arguments
+0 optional arguments
+No rest parameter
+No keyword parameters
+9 byte-code instructions:
+0     (CONST&PUSH 0)                      ; DEFGROUP
+1     (CALL1 1)                           ; SYSTEM::REMOVE-OLD-DEFINITIONS
+3     (CONST&PUSH 0)                      ; DEFGROUP
+4     (CONST&PUSH 2)                      ; #<COMPILED-FUNCTION DEFGROUP>
+5     (CONST&PUSH 3)                      ; (SYMBOL MEMBERS DOC &REST ARGS)
+6     (CALLS2&PUSH 76)                    ; SYSTEM::MAKE-MACRO
+8     (CALLS2 156)                        ; SYSTEM::%PUTD
+10    (CONST 0)                           ; DEFGROUP
+11    (SKIP&RET 1)
+
+Disassembly of function DEFGROUP
+(CONST 0) = 4
+(CONST 1) = SYSTEM::LIST-LENGTH-IN-BOUNDS-P
+(CONST 2) = SYSTEM::MACRO-CALL-ERROR
+(CONST 3) = CUSTOM-DECLARE-GROUP
+(CONST 4) = QUOTE
+2 required arguments
+0 optional arguments
+No rest parameter
+No keyword parameters
+37 byte-code instructions:
+0     (LOAD&PUSH 2)
+1     (CONST&PUSH 0)                      ; 4
+2     (CONST&PUSH 0)                      ; 4
+3     (T&PUSH)
+4     (CALL 4 1)                          ; SYSTEM::LIST-LENGTH-IN-BOUNDS-P
+7     (JMPIFNOT L41)
+9     (LOAD 2)
+10    (CDR)
+11    (CAR&PUSH)
+12    (LOAD 3)
+13    (CDR)
+14    (CDR)
+15    (CAR&PUSH)
+16    (LOAD 4)
+17    (CDR)
+18    (CDR)
+19    (CDR)
+20    (CAR&PUSH)
+21    (LOAD 5)
+22    (CDR)
+23    (CDR)
+24    (CDR)
+25    (CDR&PUSH)
+26    (CONST&PUSH 3)                      ; CUSTOM-DECLARE-GROUP
+27    (CONST&PUSH 4)                      ; QUOTE
+28    (LOAD&PUSH 5)
+29    (LIST&PUSH 2)
+31    (LOAD&PUSH 4)
+32    (LOAD&PUSH 4)
+33    (LIST&PUSH 4)
+35    (LOAD&PUSH 1)
+36    (CALLSR 2 36)                       ; NCONC
+39    (SKIP&RET 7)
+41    L41
+41    (LOAD&PUSH 2)
+42    (CALL1 2)                           ; SYSTEM::MACRO-CALL-ERROR
+44    (SKIP&RET 3)
+
+Disassembly of function #:|502 508 (DEFUN CUSTOM-ADD-TO-GROUP (GROUP OPTION WIDGET) ...)-16|
+(CONST 0) = CUSTOM-ADD-TO-GROUP
+(CONST 1) = SYSTEM::REMOVE-OLD-DEFINITIONS
+(CONST 2) = #<COMPILED-FUNCTION CUSTOM-ADD-TO-GROUP>
+0 required arguments
+0 optional arguments
+No rest parameter
+No keyword parameters
+7 byte-code instructions:
+0     (CONST&PUSH 0)                      ; CUSTOM-ADD-TO-GROUP
+1     (CALL1 1)                           ; SYSTEM::REMOVE-OLD-DEFINITIONS
+3     (CONST&PUSH 0)                      ; CUSTOM-ADD-TO-GROUP
+4     (CONST&PUSH 2)                      ; #
+5     (CALLS2 156)                        ; SYSTEM::%PUTD
+7     (CONST 0)                           ; CUSTOM-ADD-TO-GROUP
+8     (SKIP&RET 1)
+
+Disassembly of function CUSTOM-ADD-TO-GROUP
+(CONST 0) = CUSTOM-GROUP
+(CONST 1) = PUT
+3 required arguments
+0 optional arguments
+No rest parameter
+No keyword parameters
+22 byte-code instructions:
+0     (LOAD&PUSH 3)
+1     (CONST&PUSH 0)                      ; CUSTOM-GROUP
+2     (PUSH-UNBOUND 1)
+4     (CALLS2&PUSH 158)                   ; GET
+6     (LOAD&PUSH 3)
+7     (LOAD&PUSH 3)
+8     (LIST&PUSH 2)
+10    (LOAD&PUSH 0)
+11    (LOAD&PUSH 2)
+12    (PUSH-UNBOUND 3)
+14    (CALLS1&JMPIF 193 L31)              ; MEMBER
+17    (LOAD&PUSH 5)
+18    (CONST&PUSH 0)                      ; CUSTOM-GROUP
+19    (LOAD&PUSH 3)
+20    (LOAD&PUSH 3)
+21    (LIST&PUSH 1)
+23    (CALLSR&PUSH 2 36)                  ; NCONC
+26    (CALL 3 1)                          ; PUT
+29    (SKIP&RET 6)
+31    L31
+31    (NIL)
+32    (SKIP&RET 6)
+
+Disassembly of function #:|510 519 (DEFUN CUSTOM-GROUP-OF-MODE (MODE) ...)-17|
+(CONST 0) = CUSTOM-GROUP-OF-MODE
+(CONST 1) = SYSTEM::REMOVE-OLD-DEFINITIONS
+(CONST 2) = #<COMPILED-FUNCTION CUSTOM-GROUP-OF-MODE>
+0 required arguments
+0 optional arguments
+No rest parameter
+No keyword parameters
+7 byte-code instructions:
+0     (CONST&PUSH 0)                      ; CUSTOM-GROUP-OF-MODE
+1     (CALL1 1)                           ; SYSTEM::REMOVE-OLD-DEFINITIONS
+3     (CONST&PUSH 0)                      ; CUSTOM-GROUP-OF-MODE
+4     (CONST&PUSH 2)                      ; #
+5     (CALLS2 156)                        ; SYSTEM::%PUTD
+7     (CONST 0)                           ; CUSTOM-GROUP-OF-MODE
+8     (SKIP&RET 1)
+
+Disassembly of function CUSTOM-GROUP-OF-MODE
+(CONST 0) = CUSTOM-MODE-GROUP
+(CONST 1) = CUSTOM-GROUP
+(CONST 2) = "-mode\\'"
+(CONST 3) = STRING-MATCH
+(CONST 4) = 0
+(CONST 5) = MATCH-BEGINNING
+1 required argument
+0 optional arguments
+No rest parameter
+No keyword parameters
+32 byte-code instructions:
+0     (LOAD&PUSH 1)
+1     (CONST&PUSH 0)                      ; CUSTOM-MODE-GROUP
+2     (PUSH-UNBOUND 1)
+4     (CALLS2 158)                        ; GET
+6     (JMPIF1 L48)
+8     (LOAD&PUSH 1)
+9     (CONST&PUSH 1)                      ; CUSTOM-GROUP
+10    (PUSH-UNBOUND 1)
+12    (CALLS2&JMPIF 158 L45)              ; GET
+15    (CONST&PUSH 2)                      ; "-mode\\'"
+16    (LOAD&PUSH 2)
+17    (CALLS2&PUSH 166)                   ; SYMBOL-NAME
+19    (CALL2 3)                           ; STRING-MATCH
+21    (JMPIFNOT1 L48)
+23    (LOAD&PUSH 1)
+24    (CALLS2&PUSH 166)                   ; SYMBOL-NAME
+26    (CONST&PUSH 4)                      ; 0
+27    (CONST&PUSH 4)                      ; 0
+28    (CALL1&PUSH 5)                      ; MATCH-BEGINNING
+30    (CALLS1&PUSH 84)                    ; SUBSTRING
+32    (PUSH-UNBOUND 1)
+34    (CALLS1&STORE 225 1)                ; INTERN
+37    (PUSH)
+38    (CONST&PUSH 1)                      ; CUSTOM-GROUP
+39    (PUSH-UNBOUND 1)
+41    (CALLS2 158)                        ; GET
+43    (JMPIFNOT1 L48)
+45    L45
+45    (LOAD 1)
+46    (SKIP&RET 2)
+48    L48
+48    (SKIP&RET 2)
+
+Disassembly of function #:|521 538 (DEFUN CUSTOM-HANDLE-ALL-KEYWORDS (SYMBOL ARGS TYPE) ...)-18|
+(CONST 0) = CUSTOM-HANDLE-ALL-KEYWORDS
+(CONST 1) = SYSTEM::REMOVE-OLD-DEFINITIONS
+(CONST 2) = #<COMPILED-FUNCTION CUSTOM-HANDLE-ALL-KEYWORDS>
+0 required arguments
+0 optional arguments
+No rest parameter
+No keyword parameters
+7 byte-code instructions:
+0     (CONST&PUSH 0)                      ; CUSTOM-HANDLE-ALL-KEYWORDS
+1     (CALL1 1)                           ; SYSTEM::REMOVE-OLD-DEFINITIONS
+3     (CONST&PUSH 0)                      ; CUSTOM-HANDLE-ALL-KEYWORDS
+4     (CONST&PUSH 2)                      ; #
+5     (CALLS2 156)                        ; SYSTEM::%PUTD
+7     (CONST 0)                           ; CUSTOM-HANDLE-ALL-KEYWORDS
+8     (SKIP&RET 1)
+
+Disassembly of function CUSTOM-HANDLE-ALL-KEYWORDS
+(CONST 0) = :GROUP
+(CONST 1) = MEMQ
+(CONST 2) = CUSTOM-CURRENT-GROUP
+(CONST 3) = CUSTOM-ADD-TO-GROUP
+(CONST 4) = "Junk in args %S"
+(CONST 5) = "Keyword %s is missing an argument"
+(CONST 6) = CUSTOM-HANDLE-KEYWORD
+(CONST 7) = WHILE
+3 required arguments
+0 optional arguments
+No rest parameter
+No keyword parameters
+36 byte-code instructions:
+0     (CONST&PUSH 0)                      ; :GROUP
+1     (LOAD&PUSH 3)
+2     (CALL2&JMPIF 1 L13)                 ; MEMQ
+5     (CALL0 2)                           ; CUSTOM-CURRENT-GROUP
+7     (PUSH)
+8     (LOAD&PUSH 4)
+9     (LOAD&PUSH 3)
+10    (CALL 3 3)                          ; CUSTOM-ADD-TO-GROUP
+13    L13
+13    (LOAD&PUSH 2)
+14    (LOAD&CAR&PUSH 3)
+16    (LOAD&CDR&STORE 4)
+18    (LOAD&PUSH 0)
+19    (CALLS2&JMPIFNOT 24 L33)            ; SYMBOLP
+22    (LOAD&CAR&PUSH 4)
+24    (LOAD&JMPIF 5 L37)
+27    (CONST&PUSH 5)                      ; "Keyword %s is missing an argument"
+28    (LOAD 2)
+29    L29
+29    (PUSH)
+30    (CALLSR 1 30)                       ; ERROR
+33    L33
+33    (CONST&PUSH 4)                      ; "Junk in args %S"
+34    (LOAD 5)
+35    (JMP L29)
+37    L37
+37    (LOAD&CDR&STORE 5)
+39    (LOAD&PUSH 6)
+40    (LOAD&PUSH 2)
+41    (LOAD&PUSH 2)
+42    (LOAD&PUSH 7)
+43    (CALL 4 6)                          ; CUSTOM-HANDLE-KEYWORD
+46    (SKIP 1)
+48    (STORE 0)
+49    (CALL2 7)                           ; WHILE
+51    (SKIP&RET 4)
+WARNING: in CUSTOM-HANDLE-KEYWORD in lines 540..560 : PURIFY-FLAG is neither
+         declared nor bound,
+         it will be treated as if it were declared SPECIAL.
+
+Disassembly of function #:|540 560 (DEFUN CUSTOM-HANDLE-KEYWORD (SYMBOL KEYWORD VALUE ...) ...)-19|
+(CONST 0) = CUSTOM-HANDLE-KEYWORD
+(CONST 1) = SYSTEM::REMOVE-OLD-DEFINITIONS
+(CONST 2) = #<COMPILED-FUNCTION CUSTOM-HANDLE-KEYWORD>
+0 required arguments
+0 optional arguments
+No rest parameter
+No keyword parameters
+7 byte-code instructions:
+0     (CONST&PUSH 0)                      ; CUSTOM-HANDLE-KEYWORD
+1     (CALL1 1)                           ; SYSTEM::REMOVE-OLD-DEFINITIONS
+3     (CONST&PUSH 0)                      ; CUSTOM-HANDLE-KEYWORD
+4     (CONST&PUSH 2)                      ; #
+5     (CALLS2 156)                        ; SYSTEM::%PUTD
+7     (CONST 0)                           ; CUSTOM-HANDLE-KEYWORD
+8     (SKIP&RET 1)
+
+Disassembly of function CUSTOM-HANDLE-KEYWORD
+(CONST 0) = PURIFY-FLAG
+(CONST 1) = PURECOPY
+(CONST 2) = :GROUP
+(CONST 3) = CUSTOM-ADD-TO-GROUP
+(CONST 4) = :VERSION
+(CONST 5) = CUSTOM-ADD-VERSION
+(CONST 6) = :PACKAGE-VERSION
+(CONST 7) = CUSTOM-ADD-PACKAGE-VERSION
+(CONST 8) = :LINK
+(CONST 9) = CUSTOM-ADD-LINK
+(CONST 10) = :LOAD
+(CONST 11) = CUSTOM-ADD-LOAD
+(CONST 12) = :TAG
+(CONST 13) = CUSTOM-TAG
+(CONST 14) = PUT
+(CONST 15) = :SET-AFTER
+(CONST 16) = CUSTOM-ADD-DEPENDENCIES
+(CONST 17) = "Unknown keyword %s"
+4 required arguments
+0 optional arguments
+No rest parameter
+No keyword parameters
+reads special variable: PURIFY-FLAG
+60 byte-code instructions:
+0     (GETVALUE 0)                        ; PURIFY-FLAG
+2     (JMPIFNOT L8)
+4     (LOAD&PUSH 2)
+5     (CALL1 1)                           ; PURECOPY
+7     (STORE 2)
+8     L8
+8     (LOAD&PUSH 3)
+9     (JMPIFEQTO 2 L41)                   ; :GROUP
+12    (LOAD&PUSH 3)
+13    (JMPIFEQTO 4 L49)                   ; :VERSION
+16    (LOAD&PUSH 3)
+17    (JMPIFEQTO 6 L55)                   ; :PACKAGE-VERSION
+20    (LOAD&PUSH 3)
+21    (JMPIFEQTO 8 L61)                   ; :LINK
+24    (LOAD&PUSH 3)
+25    (JMPIFEQTO 10 L67)                  ; :LOAD
+28    (LOAD&PUSH 3)
+29    (JMPIFEQTO 12 L73)                  ; :TAG
+32    (LOAD&PUSH 3)
+33    (JMPIFEQTO 15 L81)                  ; :SET-AFTER
+36    (CONST&PUSH 17)                     ; "Unknown keyword %s"
+37    (LOAD&PUSH 4)
+38    (CALLSR 1 30)                       ; ERROR
+41    L41
+41    (LOAD&PUSH 2)
+42    (LOAD&PUSH 5)
+43    (LOAD&PUSH 3)
+44    (CALL 3 3)                          ; CUSTOM-ADD-TO-GROUP
+47    (SKIP&RET 5)
+49    L49
+49    (LOAD&PUSH 4)
+50    (LOAD&PUSH 3)
+51    (CALL2 5)                           ; CUSTOM-ADD-VERSION
+53    (SKIP&RET 5)
+55    L55
+55    (LOAD&PUSH 4)
+56    (LOAD&PUSH 3)
+57    (CALL2 7)                           ; CUSTOM-ADD-PACKAGE-VERSION
+59    (SKIP&RET 5)
+61    L61
+61    (LOAD&PUSH 4)
+62    (LOAD&PUSH 3)
+63    (CALL2 9)                           ; CUSTOM-ADD-LINK
+65    (SKIP&RET 5)
+67    L67
+67    (LOAD&PUSH 4)
+68    (LOAD&PUSH 3)
+69    (CALL2 11)                          ; CUSTOM-ADD-LOAD
+71    (SKIP&RET 5)
+73    L73
+73    (LOAD&PUSH 4)
+74    (CONST&PUSH 13)                     ; CUSTOM-TAG
+75    (LOAD&PUSH 4)
+76    (CALL 3 14)                         ; PUT
+79    (SKIP&RET 5)
+81    L81
+81    (LOAD&PUSH 4)
+82    (LOAD&PUSH 3)
+83    (CALL2 16)                          ; CUSTOM-ADD-DEPENDENCIES
+85    (SKIP&RET 5)
+
+Disassembly of function #:|562 579 (DEFUN CUSTOM-ADD-DEPENDENCIES (SYMBOL VALUE) ...)-20|
+(CONST 0) = CUSTOM-ADD-DEPENDENCIES
+(CONST 1) = SYSTEM::REMOVE-OLD-DEFINITIONS
+(CONST 2) = #<COMPILED-FUNCTION CUSTOM-ADD-DEPENDENCIES>
+0 required arguments
+0 optional arguments
+No rest parameter
+No keyword parameters
+7 byte-code instructions:
+0     (CONST&PUSH 0)                      ; CUSTOM-ADD-DEPENDENCIES
+1     (CALL1 1)                           ; SYSTEM::REMOVE-OLD-DEFINITIONS
+3     (CONST&PUSH 0)                      ; CUSTOM-ADD-DEPENDENCIES
+4     (CONST&PUSH 2)                      ; #
+5     (CALLS2 156)                        ; SYSTEM::%PUTD
+7     (CONST 0)                           ; CUSTOM-ADD-DEPENDENCIES
+8     (SKIP&RET 1)
+
+Disassembly of function CUSTOM-ADD-DEPENDENCIES
+(CONST 0) = "Invalid custom dependency `%s'"
+(CONST 1) = CUSTOM-DEPENDENCIES
+(CONST 2) = "Invalid custom dependency `%s'"
+(CONST 3) = MEMQ
+(CONST 4) = WHILE
+(CONST 5) = PUT
+2 required arguments
+0 optional arguments
+No rest parameter
+No keyword parameters
+41 byte-code instructions:
+0     (LOAD&PUSH 1)
+1     (CALLS2&JMPIFNOT 29 L24)            ; LISTP
+4     (LOAD&PUSH 2)
+5     (CONST&PUSH 1)                      ; CUSTOM-DEPENDENCIES
+6     (PUSH-UNBOUND 1)
+8     (CALLS2&PUSH 158)                   ; GET
+10    (LOAD&PUSH 0)
+11    (LOAD&PUSH 3)
+12    (LOAD&CAR&PUSH 4)
+14    (LOAD&PUSH 0)
+15    (CALLS2&JMPIF 24 L31)               ; SYMBOLP
+18    (CONST&PUSH 2)                      ; "Invalid custom dependency `%s'"
+19    (LOAD 1)
+20    L20
+20    (PUSH)
+21    (CALLSR 1 30)                       ; ERROR
+24    L24
+24    (CONST&PUSH 0)                      ; "Invalid custom dependency `%s'"
+25    (LOAD 2)
+26    (JMP L20)
+28    L28
+28    (NIL)
+29    (SKIP&RET 5)
+31    L31
+31    (LOAD&PUSH 0)
+32    (LOAD&PUSH 3)
+33    (CALL2&JMPIF 3 L39)                 ; MEMQ
+36    (LOAD&PUSH 0)
+37    (LOAD&CONS&STORE 2)
+39    L39
+39    (LOAD&CDR&STORE 5)
+41    (STORE 0)
+42    (CALL2 4)                           ; WHILE
+44    (LOAD&PUSH 1)
+45    (LOAD 1)
+46    (JMPIFEQ L28)
+48    (LOAD&PUSH 4)
+49    (CONST&PUSH 1)                      ; CUSTOM-DEPENDENCIES
+50    (LOAD&PUSH 2)
+51    (CALL 3 5)                          ; PUT
+54    (SKIP&RET 5)
+
+Disassembly of function #:|581 590 (DEFUN CUSTOM-ADD-OPTION (SYMBOL OPTION) ...)-21|
+(CONST 0) = CUSTOM-ADD-OPTION
+(CONST 1) = SYSTEM::REMOVE-OLD-DEFINITIONS
+(CONST 2) = #<COMPILED-FUNCTION CUSTOM-ADD-OPTION>
+0 required arguments
+0 optional arguments
+No rest parameter
+No keyword parameters
+7 byte-code instructions:
+0     (CONST&PUSH 0)                      ; CUSTOM-ADD-OPTION
+1     (CALL1 1)                           ; SYSTEM::REMOVE-OLD-DEFINITIONS
+3     (CONST&PUSH 0)                      ; CUSTOM-ADD-OPTION
+4     (CONST&PUSH 2)                      ; #
+5     (CALLS2 156)                        ; SYSTEM::%PUTD
+7     (CONST 0)                           ; CUSTOM-ADD-OPTION
+8     (SKIP&RET 1)
+
+Disassembly of function CUSTOM-ADD-OPTION
+(CONST 0) = CUSTOM-OPTIONS
+(CONST 1) = PUT
+2 required arguments
+0 optional arguments
+No rest parameter
+No keyword parameters
+18 byte-code instructions:
+0     (LOAD&PUSH 2)
+1     (CONST&PUSH 0)                      ; CUSTOM-OPTIONS
+2     (PUSH-UNBOUND 1)
+4     (CALLS2&PUSH 158)                   ; GET
+6     (LOAD&PUSH 2)
+7     (LOAD&PUSH 1)
+8     (PUSH-UNBOUND 3)
+10    (CALLS1&JMPIF 193 L23)              ; MEMBER
+13    (LOAD&PUSH 3)
+14    (CONST&PUSH 0)                      ; CUSTOM-OPTIONS
+15    (LOAD&PUSH 4)
+16    (LOAD 3)
+17    (CONS&PUSH)
+18    (CALL 3 1)                          ; PUT
+21    (SKIP&RET 4)
+23    L23
+23    (NIL)
+24    (SKIP&RET 4)
+
+Disassembly of function #:|591 591 (DEFALIAS 'CUSTOM-ADD-FREQUENT-VALUE 'CUSTOM-ADD-OPTION)-22|
+(CONST 0) = CUSTOM-ADD-FREQUENT-VALUE
+(CONST 1) = CUSTOM-ADD-OPTION
+(CONST 2) = DEFALIAS
+0 required arguments
+0 optional arguments
+No rest parameter
+No keyword parameters
+4 byte-code instructions:
+0     (CONST&PUSH 0)                      ; CUSTOM-ADD-FREQUENT-VALUE
+1     (CONST&PUSH 1)                      ; CUSTOM-ADD-OPTION
+2     (CALL2 2)                           ; DEFALIAS
+4     (SKIP&RET 1)
+
+Disassembly of function #:|593 597 (DEFUN CUSTOM-ADD-LINK (SYMBOL WIDGET) ...)-23|
+(CONST 0) = CUSTOM-ADD-LINK
+(CONST 1) = SYSTEM::REMOVE-OLD-DEFINITIONS
+(CONST 2) = #<COMPILED-FUNCTION CUSTOM-ADD-LINK>
+0 required arguments
+0 optional arguments
+No rest parameter
+No keyword parameters
+7 byte-code instructions:
+0     (CONST&PUSH 0)                      ; CUSTOM-ADD-LINK
+1     (CALL1 1)                           ; SYSTEM::REMOVE-OLD-DEFINITIONS
+3     (CONST&PUSH 0)                      ; CUSTOM-ADD-LINK
+4     (CONST&PUSH 2)                      ; #
+5     (CALLS2 156)                        ; SYSTEM::%PUTD
+7     (CONST 0)                           ; CUSTOM-ADD-LINK
+8     (SKIP&RET 1)
+
+Disassembly of function CUSTOM-ADD-LINK
+(CONST 0) = CUSTOM-LINKS
+(CONST 1) = PURECOPY
+(CONST 2) = PUT
+2 required arguments
+0 optional arguments
+No rest parameter
+No keyword parameters
+19 byte-code instructions:
+0     (LOAD&PUSH 2)
+1     (CONST&PUSH 0)                      ; CUSTOM-LINKS
+2     (PUSH-UNBOUND 1)
+4     (CALLS2&PUSH 158)                   ; GET
+6     (LOAD&PUSH 2)
+7     (LOAD&PUSH 1)
+8     (PUSH-UNBOUND 3)
+10    (CALLS1&JMPIF 193 L25)              ; MEMBER
+13    (LOAD&PUSH 3)
+14    (CONST&PUSH 0)                      ; CUSTOM-LINKS
+15    (LOAD&PUSH 4)
+16    (CALL1&PUSH 1)                      ; PURECOPY
+18    (LOAD 3)
+19    (CONS&PUSH)
+20    (CALL 3 2)                          ; PUT
+23    (SKIP&RET 4)
+25    L25
+25    (NIL)
+26    (SKIP&RET 4)
+
+Disassembly of function #:|599 601 (DEFUN CUSTOM-ADD-VERSION (SYMBOL VERSION) ...)-24|
+(CONST 0) = CUSTOM-ADD-VERSION
+(CONST 1) = SYSTEM::REMOVE-OLD-DEFINITIONS
+(CONST 2) = #<COMPILED-FUNCTION CUSTOM-ADD-VERSION>
+0 required arguments
+0 optional arguments
+No rest parameter
+No keyword parameters
+7 byte-code instructions:
+0     (CONST&PUSH 0)                      ; CUSTOM-ADD-VERSION
+1     (CALL1 1)                           ; SYSTEM::REMOVE-OLD-DEFINITIONS
+3     (CONST&PUSH 0)                      ; CUSTOM-ADD-VERSION
+4     (CONST&PUSH 2)                      ; #
+5     (CALLS2 156)                        ; SYSTEM::%PUTD
+7     (CONST 0)                           ; CUSTOM-ADD-VERSION
+8     (SKIP&RET 1)
+
+Disassembly of function CUSTOM-ADD-VERSION
+(CONST 0) = CUSTOM-VERSION
+(CONST 1) = PURECOPY
+(CONST 2) = PUT
+2 required arguments
+0 optional arguments
+No rest parameter
+No keyword parameters
+6 byte-code instructions:
+0     (LOAD&PUSH 2)
+1     (CONST&PUSH 0)                      ; CUSTOM-VERSION
+2     (LOAD&PUSH 3)
+3     (CALL1&PUSH 1)                      ; PURECOPY
+5     (CALL 3 2)                          ; PUT
+8     (SKIP&RET 3)
+
+Disassembly of function #:|603 605 (DEFUN CUSTOM-ADD-PACKAGE-VERSION (SYMBOL VERSION) ...)-25|
+(CONST 0) = CUSTOM-ADD-PACKAGE-VERSION
+(CONST 1) = SYSTEM::REMOVE-OLD-DEFINITIONS
+(CONST 2) = #<COMPILED-FUNCTION CUSTOM-ADD-PACKAGE-VERSION>
+0 required arguments
+0 optional arguments
+No rest parameter
+No keyword parameters
+7 byte-code instructions:
+0     (CONST&PUSH 0)                      ; CUSTOM-ADD-PACKAGE-VERSION
+1     (CALL1 1)                           ; SYSTEM::REMOVE-OLD-DEFINITIONS
+3     (CONST&PUSH 0)                      ; CUSTOM-ADD-PACKAGE-VERSION
+4     (CONST&PUSH 2)                      ; #
+5     (CALLS2 156)                        ; SYSTEM::%PUTD
+7     (CONST 0)                           ; CUSTOM-ADD-PACKAGE-VERSION
+8     (SKIP&RET 1)
+
+Disassembly of function CUSTOM-ADD-PACKAGE-VERSION
+(CONST 0) = CUSTOM-PACKAGE-VERSION
+(CONST 1) = PURECOPY
+(CONST 2) = PUT
+2 required arguments
+0 optional arguments
+No rest parameter
+No keyword parameters
+6 byte-code instructions:
+0     (LOAD&PUSH 2)
+1     (CONST&PUSH 0)                      ; CUSTOM-PACKAGE-VERSION
+2     (LOAD&PUSH 3)
+3     (CALL1&PUSH 1)                      ; PURECOPY
+5     (CALL 3 2)                          ; PUT
+8     (SKIP&RET 3)
+
+Disassembly of function #:|607 612 (DEFUN CUSTOM-ADD-LOAD (SYMBOL LOAD) ...)-26|
+(CONST 0) = CUSTOM-ADD-LOAD
+(CONST 1) = SYSTEM::REMOVE-OLD-DEFINITIONS
+(CONST 2) = #<COMPILED-FUNCTION CUSTOM-ADD-LOAD>
+0 required arguments
+0 optional arguments
+No rest parameter
+No keyword parameters
+7 byte-code instructions:
+0     (CONST&PUSH 0)                      ; CUSTOM-ADD-LOAD
+1     (CALL1 1)                           ; SYSTEM::REMOVE-OLD-DEFINITIONS
+3     (CONST&PUSH 0)                      ; CUSTOM-ADD-LOAD
+4     (CONST&PUSH 2)                      ; #
+5     (CALLS2 156)                        ; SYSTEM::%PUTD
+7     (CONST 0)                           ; CUSTOM-ADD-LOAD
+8     (SKIP&RET 1)
+
+Disassembly of function CUSTOM-ADD-LOAD
+(CONST 0) = CUSTOM-LOADS
+(CONST 1) = PURECOPY
+(CONST 2) = PUT
+2 required arguments
+0 optional arguments
+No rest parameter
+No keyword parameters
+19 byte-code instructions:
+0     (LOAD&PUSH 2)
+1     (CONST&PUSH 0)                      ; CUSTOM-LOADS
+2     (PUSH-UNBOUND 1)
+4     (CALLS2&PUSH 158)                   ; GET
+6     (LOAD&PUSH 2)
+7     (LOAD&PUSH 1)
+8     (PUSH-UNBOUND 3)
+10    (CALLS1&JMPIF 193 L25)              ; MEMBER
+13    (LOAD&PUSH 3)
+14    (CONST&PUSH 0)                      ; CUSTOM-LOADS
+15    (LOAD&PUSH 4)
+16    (CALL1&PUSH 1)                      ; PURECOPY
+18    (LOAD 3)
+19    (CONS&PUSH)
+20    (CALL 3 2)                          ; PUT
+23    (SKIP&RET 4)
+25    L25
+25    (NIL)
+26    (SKIP&RET 4)
+
+Disassembly of function #:|614 618 (DEFUN CUSTOM-AUTOLOAD (SYMBOL LOAD &OPTIONAL ...) ...)-27|
+(CONST 0) = CUSTOM-AUTOLOAD
+(CONST 1) = SYSTEM::REMOVE-OLD-DEFINITIONS
+(CONST 2) = #<COMPILED-FUNCTION CUSTOM-AUTOLOAD>
+0 required arguments
+0 optional arguments
+No rest parameter
+No keyword parameters
+7 byte-code instructions:
+0     (CONST&PUSH 0)                      ; CUSTOM-AUTOLOAD
+1     (CALL1 1)                           ; SYSTEM::REMOVE-OLD-DEFINITIONS
+3     (CONST&PUSH 0)                      ; CUSTOM-AUTOLOAD
+4     (CONST&PUSH 2)                      ; #
+5     (CALLS2 156)                        ; SYSTEM::%PUTD
+7     (CONST 0)                           ; CUSTOM-AUTOLOAD
+8     (SKIP&RET 1)
+
+Disassembly of function CUSTOM-AUTOLOAD
+(CONST 0) = CUSTOM-AUTOLOAD
+(CONST 1) = NOSET
+(CONST 2) = PUT
+(CONST 3) = CUSTOM-ADD-LOAD
+2 required arguments
+1 optional argument
+No rest parameter
+No keyword parameters
+15 byte-code instructions:
+0     (UNBOUND->NIL 1)
+2     (LOAD&PUSH 3)
+3     (CONST&PUSH 0)                      ; CUSTOM-AUTOLOAD
+4     (LOAD&JMPIF 3 L18)
+7     (T)
+8     L8
+8     (PUSH)
+9     (CALL 3 2)                          ; PUT
+12    (LOAD&PUSH 3)
+13    (LOAD&PUSH 3)
+14    (CALL2 3)                           ; CUSTOM-ADD-LOAD
+16    (SKIP&RET 4)
+18    L18
+18    (CONST 1)                           ; NOSET
+19    (JMP L8)
+
+Disassembly of function #:|620 628 (DEFUN CUSTOM-VARIABLE-P (VARIABLE) ...)-28|
+(CONST 0) = CUSTOM-VARIABLE-P
+(CONST 1) = SYSTEM::REMOVE-OLD-DEFINITIONS
+(CONST 2) = #<COMPILED-FUNCTION CUSTOM-VARIABLE-P>
+0 required arguments
+0 optional arguments
+No rest parameter
+No keyword parameters
+7 byte-code instructions:
+0     (CONST&PUSH 0)                      ; CUSTOM-VARIABLE-P
+1     (CALL1 1)                           ; SYSTEM::REMOVE-OLD-DEFINITIONS
+3     (CONST&PUSH 0)                      ; CUSTOM-VARIABLE-P
+4     (CONST&PUSH 2)                      ; #
+5     (CALLS2 156)                        ; SYSTEM::%PUTD
+7     (CONST 0)                           ; CUSTOM-VARIABLE-P
+8     (SKIP&RET 1)
+
+Disassembly of function CUSTOM-VARIABLE-P
+(CONST 0) = INDIRECT-VARIABLE
+(CONST 1) = STANDARD-VALUE
+(CONST 2) = CUSTOM-AUTOLOAD
+1 required argument
+0 optional arguments
+No rest parameter
+No keyword parameters
+18 byte-code instructions:
+0     (LOAD&PUSH 1)
+1     (CALLS2 24)                         ; SYMBOLP
+3     (JMPIFNOT1 L25)
+5     (LOAD&PUSH 1)
+6     (CALL1 0)                           ; INDIRECT-VARIABLE
+8     (STORE 1)
+9     (PUSH)
+10    (CONST&PUSH 1)                      ; STANDARD-VALUE
+11    (PUSH-UNBOUND 1)
+13    (CALLS2 158)                        ; GET
+15    (JMPIF1 L25)
+17    (LOAD&PUSH 1)
+18    (CONST&PUSH 2)                      ; CUSTOM-AUTOLOAD
+19    (PUSH-UNBOUND 1)
+21    (CALLS2 158)                        ; GET
+23    (SKIP&RET 2)
+25    L25
+25    (SKIP&RET 2)
+
+Disassembly of function #:|630 630 (DEFINE-OBSOLETE-FUNCTION-ALIAS 'USER-VARIABLE-P 'CUSTOM-VARIABLE-P ...)-29|
+(CONST 0) = USER-VARIABLE-P
+(CONST 1) = CUSTOM-VARIABLE-P
+(CONST 2) = "24.3"
+(CONST 3) = DEFINE-OBSOLETE-FUNCTION-ALIAS
+0 required arguments
+0 optional arguments
+No rest parameter
+No keyword parameters
+5 byte-code instructions:
+0     (CONST&PUSH 0)                      ; USER-VARIABLE-P
+1     (CONST&PUSH 1)                      ; CUSTOM-VARIABLE-P
+2     (CONST&PUSH 2)                      ; "24.3"
+3     (CALL 3 3)                          ; DEFINE-OBSOLETE-FUNCTION-ALIAS
+6     (SKIP&RET 1)
+
+Disassembly of function #:|632 636 (DEFUN CUSTOM-NOTE-VAR-CHANGED (VARIABLE) ...)-30|
+(CONST 0) = CUSTOM-NOTE-VAR-CHANGED
+(CONST 1) = SYSTEM::REMOVE-OLD-DEFINITIONS
+(CONST 2) = #<COMPILED-FUNCTION CUSTOM-NOTE-VAR-CHANGED>
+0 required arguments
+0 optional arguments
+No rest parameter
+No keyword parameters
+7 byte-code instructions:
+0     (CONST&PUSH 0)                      ; CUSTOM-NOTE-VAR-CHANGED
+1     (CALL1 1)                           ; SYSTEM::REMOVE-OLD-DEFINITIONS
+3     (CONST&PUSH 0)                      ; CUSTOM-NOTE-VAR-CHANGED
+4     (CONST&PUSH 2)                      ; #
+5     (CALLS2 156)                        ; SYSTEM::%PUTD
+7     (CONST 0)                           ; CUSTOM-NOTE-VAR-CHANGED
+8     (SKIP&RET 1)
+
+Disassembly of function CUSTOM-NOTE-VAR-CHANGED
+(CONST 0) = CUSTOMIZED-VALUE
+(CONST 1) = CUSTOM-QUOTE
+(CONST 2) = PUT
+1 required argument
+0 optional arguments
+No rest parameter
+No keyword parameters
+8 byte-code instructions:
+0     (LOAD&PUSH 1)
+1     (CONST&PUSH 0)                      ; CUSTOMIZED-VALUE
+2     (LOAD&PUSH 3)
+3     (CALLS1&PUSH 99)                    ; EVAL
+5     (CALL1&PUSH 1)                      ; CUSTOM-QUOTE
+7     (LIST&PUSH 1)
+9     (CALL 3 2)                          ; PUT
+12    (SKIP&RET 2)
+
+Disassembly of function #:|638 642 (DEFVAR CUSTOM-LOAD-RECURSION NIL ...)-31|
+(CONST 0) = (SPECIAL CUSTOM-LOAD-RECURSION)
+(CONST 1) = CUSTOM-LOAD-RECURSION
+(CONST 2) = VARIABLE
+(CONST 3) = "Hack to avoid recursive dependencies."
+(CONST 4) = SYSTEM::%SET-DOCUMENTATION
+0 required arguments
+0 optional arguments
+No rest parameter
+No keyword parameters
+14 byte-code instructions:
+0     (CONST&PUSH 0)                      ; (SPECIAL CUSTOM-LOAD-RECURSION)
+1     (CALLS1 98)                         ; PROCLAIM
+3     (CONST&PUSH 1)                      ; CUSTOM-LOAD-RECURSION
+4     (CALLS1&JMPIF 87 L11)               ; BOUNDP
+7     (CONST&PUSH 1)                      ; CUSTOM-LOAD-RECURSION
+8     (NIL&PUSH)
+9     (CALLS1 90)                         ; SYSTEM::SET-SYMBOL-VALUE
+11    L11
+11    (CONST&PUSH 1)                      ; CUSTOM-LOAD-RECURSION
+12    (CONST&PUSH 2)                      ; VARIABLE
+13    (CONST&PUSH 3)                      ; "Hack to avoid recursive dependencies."
+14    (CALL 3 4)                          ; SYSTEM::%SET-DOCUMENTATION
+17    (CONST 1)                           ; CUSTOM-LOAD-RECURSION
+18    (SKIP&RET 1)

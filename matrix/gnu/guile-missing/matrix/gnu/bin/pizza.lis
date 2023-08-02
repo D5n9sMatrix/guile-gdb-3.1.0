@@ -1,0 +1,40 @@
+Listing of compilation of file /home/admin/guile-gdb/guile-missing/matrix/gnu/bin/boolean-object.el
+on 2023-07-28 17:25:10 by CLISP, version 2.49.93+ (2018-02-18) (built on lcy02-amd64-055.buildd [127.0.1.1])
+;; Compiling file /home/admin/guile-gdb/guile-missing/matrix/gnu/bin/boolean-object.el ...
+
+Disassembly of function #:|1 31 (CAR '(1 2))-1|
+(CONST 0) = (1 2)
+0 required arguments
+0 optional arguments
+No rest parameter
+No keyword parameters
+3 byte-code instructions:
+0     (CONST 0)                           ; (1 2)
+1     (CAR)
+2     (SKIP&RET 1)
+
+Disassembly of function #:|33 38 (THIRD '(A B C))-2|
+(CONST 0) = (A B C)
+0 required arguments
+0 optional arguments
+No rest parameter
+No keyword parameters
+5 byte-code instructions:
+0     (CONST 0)                           ; (A B C)
+1     (CDR)
+2     (CDR)
+3     (CAR)
+4     (SKIP&RET 1)
+
+Disassembly of function #:|39 39 (CAR (CDR #))-3|
+(CONST 0) = (A B C)
+0 required arguments
+0 optional arguments
+No rest parameter
+No keyword parameters
+5 byte-code instructions:
+0     (CONST 0)                           ; (A B C)
+1     (CDR)
+2     (CDR)
+3     (CAR)
+4     (SKIP&RET 1)

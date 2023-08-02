@@ -1,0 +1,385 @@
+Listing of compilation of file /home/admin/guile-gdb/guile-cpnum/matrix/gnu/bin/cpnum.el
+on 2023-08-02 02:47:56 by CLISP, version 2.49.93+ (2018-02-18) (built on lcy02-amd64-055.buildd [127.0.1.1])
+;; Compiling file /home/admin/guile-gdb/guile-cpnum/matrix/gnu/bin/cpnum.el ...
+
+Disassembly of function #:|1 29 (DEFVAR FUZZ-FACTOR 1.0E-6)-1|
+(CONST 0) = (SPECIAL FUZZ-FACTOR)
+(CONST 1) = FUZZ-FACTOR
+(CONST 2) = 1.0E-6
+0 required arguments
+0 optional arguments
+No rest parameter
+No keyword parameters
+10 byte-code instructions:
+0     (CONST&PUSH 0)                      ; (SPECIAL FUZZ-FACTOR)
+1     (CALLS1 98)                         ; PROCLAIM
+3     (CONST&PUSH 1)                      ; FUZZ-FACTOR
+4     (CALLS1&JMPIF 87 L11)               ; BOUNDP
+7     (CONST&PUSH 1)                      ; FUZZ-FACTOR
+8     (CONST&PUSH 2)                      ; 1.0E-6
+9     (CALLS1 90)                         ; SYSTEM::SET-SYMBOL-VALUE
+11    L11
+11    (CONST 1)                           ; FUZZ-FACTOR
+12    (SKIP&RET 1)
+
+Disassembly of function #:|30 34 (DEFUN APPROX-EQUAL1 (X Y) ...)-2|
+(CONST 0) = APPROX-EQUAL1
+(CONST 1) = SYSTEM::REMOVE-OLD-DEFINITIONS
+(CONST 2) = #<COMPILED-FUNCTION APPROX-EQUAL1>
+0 required arguments
+0 optional arguments
+No rest parameter
+No keyword parameters
+7 byte-code instructions:
+0     (CONST&PUSH 0)                      ; APPROX-EQUAL1
+1     (CALL1 1)                           ; SYSTEM::REMOVE-OLD-DEFINITIONS
+3     (CONST&PUSH 0)                      ; APPROX-EQUAL1
+4     (CONST&PUSH 2)                      ; #<COMPILED-FUNCTION APPROX-EQUAL1>
+5     (CALLS2 156)                        ; SYSTEM::%PUTD
+7     (CONST 0)                           ; APPROX-EQUAL1
+8     (SKIP&RET 1)
+
+Disassembly of function APPROX-EQUAL1
+(CONST 0) = FUZZ-FACTOR
+2 required arguments
+0 optional arguments
+No rest parameter
+No keyword parameters
+reads special variable: FUZZ-FACTOR
+19 byte-code instructions:
+0     (LOAD&PUSH 2)
+1     (LOAD&PUSH 2)
+2     (CALLSR 1 47)                       ; =
+5     (JMPIF1 L33)
+7     (LOAD&PUSH 2)
+8     (LOAD&PUSH 2)
+9     (CALLSR&PUSH 1 56)                  ; -
+12    (CALLS2&PUSH 185)                   ; ABS
+14    (LOAD&PUSH 3)
+15    (CALLS2&PUSH 185)                   ; ABS
+17    (LOAD&PUSH 3)
+18    (CALLS2&PUSH 185)                   ; ABS
+20    (CALLSR&PUSH 1 53)                  ; MAX
+23    (CALLSR&PUSH 1 58)                  ; /
+26    (GETVALUE&PUSH 0)                   ; FUZZ-FACTOR
+28    (CALLSR 1 49)                       ; <
+31    (SKIP&RET 3)
+33    L33
+33    (SKIP&RET 3)
+
+Disassembly of function #:|36 40 (DEFUN APPROX-EQUAL2 (X Y) ...)-3|
+(CONST 0) = APPROX-EQUAL2
+(CONST 1) = SYSTEM::REMOVE-OLD-DEFINITIONS
+(CONST 2) = #<COMPILED-FUNCTION APPROX-EQUAL2>
+0 required arguments
+0 optional arguments
+No rest parameter
+No keyword parameters
+7 byte-code instructions:
+0     (CONST&PUSH 0)                      ; APPROX-EQUAL2
+1     (CALL1 1)                           ; SYSTEM::REMOVE-OLD-DEFINITIONS
+3     (CONST&PUSH 0)                      ; APPROX-EQUAL2
+4     (CONST&PUSH 2)                      ; #<COMPILED-FUNCTION APPROX-EQUAL2>
+5     (CALLS2 156)                        ; SYSTEM::%PUTD
+7     (CONST 0)                           ; APPROX-EQUAL2
+8     (SKIP&RET 1)
+
+Disassembly of function APPROX-EQUAL2
+(CONST 0) = FUZZ-FACTOR
+2 required arguments
+0 optional arguments
+No rest parameter
+No keyword parameters
+reads special variable: FUZZ-FACTOR
+19 byte-code instructions:
+0     (LOAD&PUSH 2)
+1     (LOAD&PUSH 2)
+2     (CALLSR 1 48)                       ; /=
+5     (JMPIF1 L33)
+7     (LOAD&PUSH 2)
+8     (LOAD&PUSH 2)
+9     (CALLSR&PUSH 1 56)                  ; -
+12    (CALLS2&PUSH 185)                   ; ABS
+14    (LOAD&PUSH 3)
+15    (CALLS2&PUSH 185)                   ; ABS
+17    (LOAD&PUSH 3)
+18    (CALLS2&PUSH 185)                   ; ABS
+20    (CALLSR&PUSH 1 53)                  ; MAX
+23    (CALLSR&PUSH 1 58)                  ; /
+26    (GETVALUE&PUSH 0)                   ; FUZZ-FACTOR
+28    (CALLSR 1 49)                       ; <
+31    (SKIP&RET 3)
+33    L33
+33    (SKIP&RET 3)
+
+Disassembly of function #:|42 46 (DEFUN APPROX-EQUAL (X Y) ...)-4|
+(CONST 0) = APPROX-EQUAL
+(CONST 1) = SYSTEM::REMOVE-OLD-DEFINITIONS
+(CONST 2) = #<COMPILED-FUNCTION APPROX-EQUAL>
+0 required arguments
+0 optional arguments
+No rest parameter
+No keyword parameters
+7 byte-code instructions:
+0     (CONST&PUSH 0)                      ; APPROX-EQUAL
+1     (CALL1 1)                           ; SYSTEM::REMOVE-OLD-DEFINITIONS
+3     (CONST&PUSH 0)                      ; APPROX-EQUAL
+4     (CONST&PUSH 2)                      ; #<COMPILED-FUNCTION APPROX-EQUAL>
+5     (CALLS2 156)                        ; SYSTEM::%PUTD
+7     (CONST 0)                           ; APPROX-EQUAL
+8     (SKIP&RET 1)
+
+Disassembly of function APPROX-EQUAL
+(CONST 0) = FUZZ-FACTOR
+2 required arguments
+0 optional arguments
+No rest parameter
+No keyword parameters
+reads special variable: FUZZ-FACTOR
+19 byte-code instructions:
+0     (LOAD&PUSH 2)
+1     (LOAD&PUSH 2)
+2     (CALLSR 1 49)                       ; <
+5     (JMPIF1 L33)
+7     (LOAD&PUSH 2)
+8     (LOAD&PUSH 2)
+9     (CALLSR&PUSH 1 56)                  ; -
+12    (CALLS2&PUSH 185)                   ; ABS
+14    (LOAD&PUSH 3)
+15    (CALLS2&PUSH 185)                   ; ABS
+17    (LOAD&PUSH 3)
+18    (CALLS2&PUSH 185)                   ; ABS
+20    (CALLSR&PUSH 1 53)                  ; MAX
+23    (CALLSR&PUSH 1 58)                  ; /
+26    (GETVALUE&PUSH 0)                   ; FUZZ-FACTOR
+28    (CALLSR 1 49)                       ; <
+31    (SKIP&RET 3)
+33    L33
+33    (SKIP&RET 3)
+
+Disassembly of function #:|48 52 (DEFUN APPROX-EQUAL3 (X Y) ...)-5|
+(CONST 0) = APPROX-EQUAL3
+(CONST 1) = SYSTEM::REMOVE-OLD-DEFINITIONS
+(CONST 2) = #<COMPILED-FUNCTION APPROX-EQUAL3>
+0 required arguments
+0 optional arguments
+No rest parameter
+No keyword parameters
+7 byte-code instructions:
+0     (CONST&PUSH 0)                      ; APPROX-EQUAL3
+1     (CALL1 1)                           ; SYSTEM::REMOVE-OLD-DEFINITIONS
+3     (CONST&PUSH 0)                      ; APPROX-EQUAL3
+4     (CONST&PUSH 2)                      ; #<COMPILED-FUNCTION APPROX-EQUAL3>
+5     (CALLS2 156)                        ; SYSTEM::%PUTD
+7     (CONST 0)                           ; APPROX-EQUAL3
+8     (SKIP&RET 1)
+
+Disassembly of function APPROX-EQUAL3
+(CONST 0) = FUZZ-FACTOR
+2 required arguments
+0 optional arguments
+No rest parameter
+No keyword parameters
+reads special variable: FUZZ-FACTOR
+19 byte-code instructions:
+0     (LOAD&PUSH 2)
+1     (LOAD&PUSH 2)
+2     (CALLSR 1 51)                       ; <=
+5     (JMPIF1 L33)
+7     (LOAD&PUSH 2)
+8     (LOAD&PUSH 2)
+9     (CALLSR&PUSH 1 56)                  ; -
+12    (CALLS2&PUSH 185)                   ; ABS
+14    (LOAD&PUSH 3)
+15    (CALLS2&PUSH 185)                   ; ABS
+17    (LOAD&PUSH 3)
+18    (CALLS2&PUSH 185)                   ; ABS
+20    (CALLSR&PUSH 1 53)                  ; MAX
+23    (CALLSR&PUSH 1 58)                  ; /
+26    (GETVALUE&PUSH 0)                   ; FUZZ-FACTOR
+28    (CALLSR 1 49)                       ; <
+31    (SKIP&RET 3)
+33    L33
+33    (SKIP&RET 3)
+
+Disassembly of function #:|54 58 (DEFUN APPROX-EQUAL4 (X Y) ...)-6|
+(CONST 0) = APPROX-EQUAL4
+(CONST 1) = SYSTEM::REMOVE-OLD-DEFINITIONS
+(CONST 2) = #<COMPILED-FUNCTION APPROX-EQUAL4>
+0 required arguments
+0 optional arguments
+No rest parameter
+No keyword parameters
+7 byte-code instructions:
+0     (CONST&PUSH 0)                      ; APPROX-EQUAL4
+1     (CALL1 1)                           ; SYSTEM::REMOVE-OLD-DEFINITIONS
+3     (CONST&PUSH 0)                      ; APPROX-EQUAL4
+4     (CONST&PUSH 2)                      ; #<COMPILED-FUNCTION APPROX-EQUAL4>
+5     (CALLS2 156)                        ; SYSTEM::%PUTD
+7     (CONST 0)                           ; APPROX-EQUAL4
+8     (SKIP&RET 1)
+
+Disassembly of function APPROX-EQUAL4
+(CONST 0) = FUZZ-FACTOR
+2 required arguments
+0 optional arguments
+No rest parameter
+No keyword parameters
+reads special variable: FUZZ-FACTOR
+19 byte-code instructions:
+0     (LOAD&PUSH 2)
+1     (LOAD&PUSH 2)
+2     (CALLSR 1 50)                       ; >
+5     (JMPIF1 L33)
+7     (LOAD&PUSH 2)
+8     (LOAD&PUSH 2)
+9     (CALLSR&PUSH 1 56)                  ; -
+12    (CALLS2&PUSH 185)                   ; ABS
+14    (LOAD&PUSH 3)
+15    (CALLS2&PUSH 185)                   ; ABS
+17    (LOAD&PUSH 3)
+18    (CALLS2&PUSH 185)                   ; ABS
+20    (CALLSR&PUSH 1 53)                  ; MAX
+23    (CALLSR&PUSH 1 58)                  ; /
+26    (GETVALUE&PUSH 0)                   ; FUZZ-FACTOR
+28    (CALLSR 1 49)                       ; <
+31    (SKIP&RET 3)
+33    L33
+33    (SKIP&RET 3)
+
+Disassembly of function #:|60 64 (DEFUN APPROX-EQUAL5 (X Y) ...)-7|
+(CONST 0) = APPROX-EQUAL5
+(CONST 1) = SYSTEM::REMOVE-OLD-DEFINITIONS
+(CONST 2) = #<COMPILED-FUNCTION APPROX-EQUAL5>
+0 required arguments
+0 optional arguments
+No rest parameter
+No keyword parameters
+7 byte-code instructions:
+0     (CONST&PUSH 0)                      ; APPROX-EQUAL5
+1     (CALL1 1)                           ; SYSTEM::REMOVE-OLD-DEFINITIONS
+3     (CONST&PUSH 0)                      ; APPROX-EQUAL5
+4     (CONST&PUSH 2)                      ; #<COMPILED-FUNCTION APPROX-EQUAL5>
+5     (CALLS2 156)                        ; SYSTEM::%PUTD
+7     (CONST 0)                           ; APPROX-EQUAL5
+8     (SKIP&RET 1)
+
+Disassembly of function APPROX-EQUAL5
+(CONST 0) = FUZZ-FACTOR
+2 required arguments
+0 optional arguments
+No rest parameter
+No keyword parameters
+reads special variable: FUZZ-FACTOR
+19 byte-code instructions:
+0     (LOAD&PUSH 2)
+1     (LOAD&PUSH 2)
+2     (CALLSR 1 52)                       ; >=
+5     (JMPIF1 L33)
+7     (LOAD&PUSH 2)
+8     (LOAD&PUSH 2)
+9     (CALLSR&PUSH 1 56)                  ; -
+12    (CALLS2&PUSH 185)                   ; ABS
+14    (LOAD&PUSH 3)
+15    (CALLS2&PUSH 185)                   ; ABS
+17    (LOAD&PUSH 3)
+18    (CALLS2&PUSH 185)                   ; ABS
+20    (CALLSR&PUSH 1 53)                  ; MAX
+23    (CALLSR&PUSH 1 58)                  ; /
+26    (GETVALUE&PUSH 0)                   ; FUZZ-FACTOR
+28    (CALLSR 1 49)                       ; <
+31    (SKIP&RET 3)
+33    L33
+33    (SKIP&RET 3)
+
+Disassembly of function #:|66 70 (DEFUN APPROX-EQUAL6 (X Y) ...)-8|
+(CONST 0) = APPROX-EQUAL6
+(CONST 1) = SYSTEM::REMOVE-OLD-DEFINITIONS
+(CONST 2) = #<COMPILED-FUNCTION APPROX-EQUAL6>
+0 required arguments
+0 optional arguments
+No rest parameter
+No keyword parameters
+7 byte-code instructions:
+0     (CONST&PUSH 0)                      ; APPROX-EQUAL6
+1     (CALL1 1)                           ; SYSTEM::REMOVE-OLD-DEFINITIONS
+3     (CONST&PUSH 0)                      ; APPROX-EQUAL6
+4     (CONST&PUSH 2)                      ; #<COMPILED-FUNCTION APPROX-EQUAL6>
+5     (CALLS2 156)                        ; SYSTEM::%PUTD
+7     (CONST 0)                           ; APPROX-EQUAL6
+8     (SKIP&RET 1)
+
+Disassembly of function APPROX-EQUAL6
+(CONST 0) = FUZZ-FACTOR
+2 required arguments
+0 optional arguments
+No rest parameter
+No keyword parameters
+reads special variable: FUZZ-FACTOR
+19 byte-code instructions:
+0     (LOAD&PUSH 2)
+1     (LOAD&PUSH 2)
+2     (CALLSR 1 53)                       ; MAX
+5     (JMPIF1 L33)
+7     (LOAD&PUSH 2)
+8     (LOAD&PUSH 2)
+9     (CALLSR&PUSH 1 56)                  ; -
+12    (CALLS2&PUSH 185)                   ; ABS
+14    (LOAD&PUSH 3)
+15    (CALLS2&PUSH 185)                   ; ABS
+17    (LOAD&PUSH 3)
+18    (CALLS2&PUSH 185)                   ; ABS
+20    (CALLSR&PUSH 1 53)                  ; MAX
+23    (CALLSR&PUSH 1 58)                  ; /
+26    (GETVALUE&PUSH 0)                   ; FUZZ-FACTOR
+28    (CALLSR 1 49)                       ; <
+31    (SKIP&RET 3)
+33    L33
+33    (SKIP&RET 3)
+
+Disassembly of function #:|72 76 (DEFUN APPROX-EQUAL7 (X Y) ...)-9|
+(CONST 0) = APPROX-EQUAL7
+(CONST 1) = SYSTEM::REMOVE-OLD-DEFINITIONS
+(CONST 2) = #<COMPILED-FUNCTION APPROX-EQUAL7>
+0 required arguments
+0 optional arguments
+No rest parameter
+No keyword parameters
+7 byte-code instructions:
+0     (CONST&PUSH 0)                      ; APPROX-EQUAL7
+1     (CALL1 1)                           ; SYSTEM::REMOVE-OLD-DEFINITIONS
+3     (CONST&PUSH 0)                      ; APPROX-EQUAL7
+4     (CONST&PUSH 2)                      ; #<COMPILED-FUNCTION APPROX-EQUAL7>
+5     (CALLS2 156)                        ; SYSTEM::%PUTD
+7     (CONST 0)                           ; APPROX-EQUAL7
+8     (SKIP&RET 1)
+
+Disassembly of function APPROX-EQUAL7
+(CONST 0) = FUZZ-FACTOR
+2 required arguments
+0 optional arguments
+No rest parameter
+No keyword parameters
+reads special variable: FUZZ-FACTOR
+19 byte-code instructions:
+0     (LOAD&PUSH 2)
+1     (LOAD&PUSH 2)
+2     (CALLSR 1 54)                       ; MIN
+5     (JMPIF1 L33)
+7     (LOAD&PUSH 2)
+8     (LOAD&PUSH 2)
+9     (CALLSR&PUSH 1 56)                  ; -
+12    (CALLS2&PUSH 185)                   ; ABS
+14    (LOAD&PUSH 3)
+15    (CALLS2&PUSH 185)                   ; ABS
+17    (LOAD&PUSH 3)
+18    (CALLS2&PUSH 185)                   ; ABS
+20    (CALLSR&PUSH 1 53)                  ; MAX
+23    (CALLSR&PUSH 1 58)                  ; /
+26    (GETVALUE&PUSH 0)                   ; FUZZ-FACTOR
+28    (CALLSR 1 49)                       ; <
+31    (SKIP&RET 3)
+33    L33
+33    (SKIP&RET 3)
+;; Wrote file /home/admin/guile-gdb/guile-cpnum/matrix/gnu/bin/cpnum.fas
+;; Wrote file /home/admin/guile-gdb/guile-cpnum/matrix/gnu/bin/cpnum.lis

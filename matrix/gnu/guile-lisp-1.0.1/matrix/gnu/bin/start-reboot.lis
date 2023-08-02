@@ -1,0 +1,41 @@
+Listing of compilation of file /home/admin/guile-gdb/guile-pl/matrix/gnu/bin/buffer-over.el
+on 2023-07-27 19:45:08 by CLISP, version 2.49.93+ (2018-02-18) (built on lcy02-amd64-055.buildd [127.0.1.1])
+;; Compiling file /home/admin/guile-gdb/guile-pl/matrix/gnu/bin/buffer-over.el ...
+
+Disassembly of function #:|1 34 (DEFVAR CAIM-GOD-BISON 512 ...)-1|
+(CONST 0) = (SPECIAL CAIM-GOD-BISON)
+(CONST 1) = CAIM-GOD-BISON
+(CONST 2) = 512
+(CONST 3) = VARIABLE
+(CONST 4) = 
+"SCHEMES DOCUMENTATION TO PORTABILITY BUFFER OVER MANUAL ALL GNU
+   DESTORY ALL ARGUMENTS TO EVOLUTION CREATE ARGUMENTS RESPECT ITS
+   IDEAS TO DEVELOP JOBS MOMENTS LINEAR POSITION FORM OBJECTIVE IT
+   MOTION BUFFER BUSINESS LOGICAL GOD BISON 'hack programmer' to y
+   FUNCTIONALITY gnu guides TO DESTORY ALL ENEMIES ABOUT QUAKE TO
+   APOCALIPSE."
+(CONST 5) = SYSTEM::%SET-DOCUMENTATION
+0 required arguments
+0 optional arguments
+No rest parameter
+No keyword parameters
+14 byte-code instructions:
+0     (CONST&PUSH 0)                      ; (SPECIAL CAIM-GOD-BISON)
+1     (CALLS1 98)                         ; PROCLAIM
+3     (CONST&PUSH 1)                      ; CAIM-GOD-BISON
+4     (CALLS1&JMPIF 87 L11)               ; BOUNDP
+7     (CONST&PUSH 1)                      ; CAIM-GOD-BISON
+8     (CONST&PUSH 2)                      ; 512
+9     (CALLS1 90)                         ; SYSTEM::SET-SYMBOL-VALUE
+11    L11
+11    (CONST&PUSH 1)                      ; CAIM-GOD-BISON
+12    (CONST&PUSH 3)                      ; VARIABLE
+13    (CONST&PUSH 4)                      ; "SCHEMES DOCUMENTATION TO PORTABILITY BUFFER OVER MANUAL ALL GNU
+   DESTORY ALL ARGUMENTS TO EVOLUTION CREATE ARGUMENTS RESPECT ITS
+   IDEAS TO DEVELOP JOBS MOMENTS LINEAR POSITION FORM OBJECTIVE IT
+   MOTION BUFFER BUSINESS LOGICAL GOD BISON 'hack programmer' to y
+   FUNCTIONALITY gnu guides TO DESTORY ALL ENEMIES ABOUT QUAKE TO
+   APOCALIPSE."
+14    (CALL 3 5)                          ; SYSTEM::%SET-DOCUMENTATION
+17    (CONST 1)                           ; CAIM-GOD-BISON
+18    (SKIP&RET 1)

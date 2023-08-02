@@ -1,0 +1,1351 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html><script>var pmblock = 1.4;</script><!-- This manual is last updated 25 October 2022 for version
+3.7.8 of GnuTLS.
+
+Copyright (C) 2001-2012, 2014, 2016, 2019, 2022 Free Software Foundation, Inc.
+
+Permission is granted to copy, distribute and/or modify this document
+under the terms of the GNU Free Documentation License, Version 1.3 or
+any later version published by the Free Software Foundation; with no
+Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.  A
+copy of the license is included in the section entitled "GNU Free
+Documentation License". --><!-- Created by GNU Texinfo 6.7, http://www.gnu.org/software/texinfo/ --><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>GnuTLS-Guile 3.7.8</title>
+
+<meta name="description" content="GnuTLS-Guile 3.7.8">
+<meta name="keywords" content="GnuTLS-Guile 3.7.8">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="makeinfo">
+<link href="https://gnutls.org/manual/gnutls-guile.html#Top" rel="start" title="Top">
+<link href="https://gnutls.org/manual/gnutls-guile.html#Procedure-Index" rel="index" title="Procedure Index">
+<link href="https://gnutls.org/manual/gnutls-guile.html#SEC_Contents" rel="contents" title="Table of Contents">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+blockquote.indentedblock {margin-right: 0em}
+div.display {margin-left: 3.2em}
+div.example {margin-left: 3.2em}
+div.lisp {margin-left: 3.2em}
+kbd {font-style: oblique}
+pre.display {font-family: inherit}
+pre.format {font-family: inherit}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+span.nolinebreak {white-space: nowrap}
+span.roman {font-family: initial; font-weight: normal}
+span.sansserif {font-family: sans-serif; font-weight: normal}
+ul.no-bullet {list-style: none}
+body { 
+	margin: 2%;
+	padding: 0 5%;
+	background: #ffffff;
+}
+h1,h2,h3,h4,h5 {
+    font-weight: bold;
+    padding: 5px 5px 5px 5px;
+    background-color: #c2e0ff;
+    color: #336699;
+}
+h1 {
+    padding: 2em 2em 2em 5%;
+    color: white;
+    background: #336699;
+    text-align: center;
+    letter-spacing: 3px;
+}
+h2 { text-decoration: underline; }
+pre {
+  margin: 0 5%;
+  padding: 0.5em;
+}
+pre.example,pre.verbatim {
+  padding-bottom: 1em;
+
+  border: solid #c2e0ff;
+  background: #f0faff;
+  border-width: 1px 1px 1px 5px;
+  margin: 1em auto;
+  width: 90%;
+}
+
+div.node {
+  margin: 0 -5% 0 -2%;
+  padding: 0.5em 0.5em;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  font-weight: bold;
+}
+dd, li {
+  padding-top: 0.1em;
+  padding-bottom: 0.1em;
+}
+div.float {
+
+  margin-bottom: 0.5em;
+  text-align: center;
+}
+
+table {
+  text-align: left;
+  margin-left:auto;
+  margin-right:auto;
+  border-spacing: 7px;
+  width: 50%;
+}
+
+th {
+  padding: 0;
+  color: #336699;
+  background-color: #c2e0ff;
+  border: solid #000000;
+  border-width: 0px;
+  margin: 1em auto;
+  text-align: center;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+td {
+  padding: 0;
+  border: solid #000000;
+  background-color: #f0faff;
+  border-width: 0px;
+  margin: 1em auto;
+  text-align: left;
+  margin-left:auto;
+  margin-right:auto;
+  padding-left: 1em;
+}
+
+dl {
+  text-align: left;
+  margin-left:auto;
+  margin-right:auto;
+  width: 50%;
+
+  padding-left: 1em;
+  border: solid #c2e0ff;
+  background: #f0faff;
+  border-width: 5px 1px 1px 1px;
+  margin: 1em auto;
+}
+
+-->
+</style>
+
+
+</head>
+
+<body lang="en">
+<h1 class="settitle" align="center">GnuTLS-Guile 3.7.8</h1>
+
+
+
+
+
+
+
+<span id="SEC_Contents"></span>
+<h2 class="contents-heading">Table of Contents</h2>
+
+<div class="contents">
+
+<ul class="no-bullet">
+  <li><a id="toc-Preface-1" href="https://gnutls.org/manual/gnutls-guile.html#Preface">1 Preface</a></li>
+  <li><a id="toc-Guile-Preparations-1" href="https://gnutls.org/manual/gnutls-guile.html#Guile-Preparations">2 Guile Preparations</a></li>
+  <li><a id="toc-Guile-API-Conventions-1" href="https://gnutls.org/manual/gnutls-guile.html#Guile-API-Conventions">3 Guile API Conventions</a>
+  <ul class="no-bullet">
+    <li><a id="toc-Enumerates-and-Constants-1" href="https://gnutls.org/manual/gnutls-guile.html#Enumerates-and-Constants">3.1 Enumerates and Constants</a></li>
+    <li><a id="toc-Procedure-Names-1" href="https://gnutls.org/manual/gnutls-guile.html#Procedure-Names">3.2 Procedure Names</a></li>
+    <li><a id="toc-Representation-of-Binary-Data-1" href="https://gnutls.org/manual/gnutls-guile.html#Representation-of-Binary-Data">3.3 Representation of Binary Data</a></li>
+    <li><a id="toc-Input-and-Output-1" href="https://gnutls.org/manual/gnutls-guile.html#Input-and-Output">3.4 Input and Output</a></li>
+    <li><a id="toc-Exception-Handling-1" href="https://gnutls.org/manual/gnutls-guile.html#Exception-Handling">3.5 Exception Handling</a></li>
+  </ul></li>
+  <li><a id="toc-Guile-Examples-1" href="https://gnutls.org/manual/gnutls-guile.html#Guile-Examples">4 Guile Examples</a>
+  <ul class="no-bullet">
+    <li><a id="toc-Anonymous-Authentication-Guile-Example-1" href="https://gnutls.org/manual/gnutls-guile.html#Anonymous-Authentication-Guile-Example">4.1 Anonymous Authentication Guile Example</a></li>
+  </ul></li>
+  <li><a id="toc-Guile-Reference-1" href="https://gnutls.org/manual/gnutls-guile.html#Guile-Reference">5 Guile Reference</a></li>
+  <li><a id="toc-Copying-Information-1" href="https://gnutls.org/manual/gnutls-guile.html#Copying-Information">Appendix A Copying Information</a></li>
+  <li><a id="toc-Procedure-Index-1" href="https://gnutls.org/manual/gnutls-guile.html#Procedure-Index" rel="index">Procedure Index</a></li>
+  <li><a id="toc-Concept-Index-1" href="https://gnutls.org/manual/gnutls-guile.html#Concept-Index" rel="index">Concept Index</a></li>
+</ul>
+</div>
+
+
+<span id="Top"></span><div class="header">
+<p>
+Next: <a href="https://gnutls.org/manual/gnutls-guile.html#Preface" accesskey="n" rel="next">Preface</a> &nbsp; [<a href="https://gnutls.org/manual/gnutls-guile.html#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="https://gnutls.org/manual/gnutls-guile.html#Procedure-Index" title="Index" rel="index">Index</a>]</p>
+</div>
+<span id="GnuTLS_002dGuile"></span><h1 class="top">GnuTLS-Guile</h1>
+
+<p>This manual is last updated 25 October 2022 for version
+3.7.8 of GnuTLS.
+</p>
+<p>Copyright © 2001-2012, 2014, 2016, 2019, 2022 Free Software Foundation, Inc.
+</p>
+<blockquote>
+<p>Permission is granted to copy, distribute and/or modify this document
+under the terms of the GNU Free Documentation License, Version 1.3 or
+any later version published by the Free Software Foundation; with no
+Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.  A
+copy of the license is included in the section entitled “GNU Free
+Documentation License”.
+</p></blockquote>
+
+<table class="menu" cellspacing="0" border="0">
+<tbody><tr><td valign="top" align="left">• <a href="https://gnutls.org/manual/gnutls-guile.html#Preface" accesskey="1">Preface</a></td><td>&nbsp;&nbsp;</td><td valign="top" align="left">Preface.
+</td></tr>
+<tr><td valign="top" align="left">• <a href="https://gnutls.org/manual/gnutls-guile.html#Guile-Preparations" accesskey="2">Guile Preparations</a></td><td>&nbsp;&nbsp;</td><td valign="top" align="left">Note on installation and environment.
+</td></tr>
+<tr><td valign="top" align="left">• <a href="https://gnutls.org/manual/gnutls-guile.html#Guile-API-Conventions" accesskey="3">Guile API Conventions</a></td><td>&nbsp;&nbsp;</td><td valign="top" align="left">Naming conventions and other idiosyncrasies.
+</td></tr>
+<tr><td valign="top" align="left">• <a href="https://gnutls.org/manual/gnutls-guile.html#Guile-Examples" accesskey="4">Guile Examples</a></td><td>&nbsp;&nbsp;</td><td valign="top" align="left">Quick start.
+</td></tr>
+<tr><td valign="top" align="left">• <a href="https://gnutls.org/manual/gnutls-guile.html#Guile-Reference" accesskey="5">Guile Reference</a></td><td>&nbsp;&nbsp;</td><td valign="top" align="left">The Scheme GnuTLS programming interface.
+</td></tr>
+<tr><th colspan="3" valign="top" align="left"><pre class="menu-comment">
+</pre></th></tr><tr><td valign="top" align="left">• <a href="https://gnutls.org/manual/gnutls-guile.html#Copying-Information" accesskey="6">Copying Information</a></td><td>&nbsp;&nbsp;</td><td valign="top" align="left">You can copy and modify this manual.
+</td></tr>
+<tr><td valign="top" align="left">• <a href="https://gnutls.org/manual/gnutls-guile.html#Procedure-Index" rel="index" accesskey="7">Procedure Index</a></td><td>&nbsp;&nbsp;</td><td valign="top" align="left">
+</td></tr>
+<tr><td valign="top" align="left">• <a href="https://gnutls.org/manual/gnutls-guile.html#Concept-Index" rel="index" accesskey="8">Concept Index</a></td><td>&nbsp;&nbsp;</td><td valign="top" align="left">
+</td></tr>
+</tbody></table>
+
+<hr>
+<span id="Preface"></span><div class="header">
+<p>
+Next: <a href="https://gnutls.org/manual/gnutls-guile.html#Guile-Preparations" accesskey="n" rel="next">Guile Preparations</a>, Previous: <a href="https://gnutls.org/manual/gnutls-guile.html#Top" accesskey="p" rel="prev">Top</a>, Up: <a href="https://gnutls.org/manual/gnutls-guile.html#Top" accesskey="u" rel="up">Top</a> &nbsp; [<a href="https://gnutls.org/manual/gnutls-guile.html#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="https://gnutls.org/manual/gnutls-guile.html#Procedure-Index" title="Index" rel="index">Index</a>]</p>
+</div>
+<span id="Preface-1"></span><h2 class="chapter">1 Preface</h2>
+
+<p>This manual describes the <a href="https://www.gnu.org/software/guile/">GNU Guile</a> Scheme programming interface to GnuTLS, which is distributed
+as part of <a href="https://gnutls.org/">GnuTLS</a>.  The reader is
+assumed to have basic knowledge of the protocol and library.  Details
+missing from this chapter may be found in Function reference,
+of the C API reference.
+</p>
+<p>At this stage, not all the C functions are available from Scheme, but
+a large subset thereof is available.
+</p>
+<hr>
+<span id="Guile-Preparations"></span><div class="header">
+<p>
+Next: <a href="https://gnutls.org/manual/gnutls-guile.html#Guile-API-Conventions" accesskey="n" rel="next">Guile API Conventions</a>, Previous: <a href="https://gnutls.org/manual/gnutls-guile.html#Preface" accesskey="p" rel="prev">Preface</a>, Up: <a href="https://gnutls.org/manual/gnutls-guile.html#Top" accesskey="u" rel="up">Top</a> &nbsp; [<a href="https://gnutls.org/manual/gnutls-guile.html#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="https://gnutls.org/manual/gnutls-guile.html#Procedure-Index" title="Index" rel="index">Index</a>]</p>
+</div>
+<span id="Guile-Preparations-1"></span><h2 class="chapter">2 Guile Preparations</h2>
+
+<p>The GnuTLS Guile bindings are available for the Guile 3.0 and 2.2
+series, as well as the legacy 2.0 series.
+</p>
+<p>By default they are installed under the GnuTLS installation directory,
+typically <samp>/usr/local/share/guile/site/</samp>).  Normally Guile
+will not find the module there without help.  You may experience
+something like this:
+</p>
+<div class="example">
+<pre class="example">$ guile
+…
+scheme@(guile-user)&gt; (use-modules (gnutls))
+ERROR: no code for module (gnutls)
+</pre></div>
+
+<p>There are two ways to solve this.  The first is to make sure that when
+building GnuTLS, the Guile bindings will be installed in the same
+place where Guile looks.  You may do this by using the
+<code>--with-guile-site-dir</code> parameter as follows:
+</p>
+<div class="example">
+<pre class="example">$ ./configure --with-guile-site-dir=no
+</pre></div>
+
+<p>This will instruct GnuTLS to attempt to install the Guile bindings
+where Guile will look for them.  It will use <code>guile-config info
+pkgdatadir</code> to learn the path to use.
+</p>
+<p>If Guile was installed into <code>/usr</code>, you may also install GnuTLS
+using the same prefix:
+</p>
+<div class="example">
+<pre class="example">$ ./configure --prefix=/usr
+</pre></div>
+
+<p>If you want to specify the path to install the Guile bindings you can
+also specify the path directly:
+</p>
+<div class="example">
+<pre class="example">$ ./configure --with-guile-site-dir=/opt/guile/share/guile/site
+</pre></div>
+
+<p>The second solution requires some more work but may be easier to use
+if you do not have system administrator rights to your machine.  You
+need to instruct Guile so that it finds the GnuTLS Guile bindings.
+Either use the <code>GUILE_LOAD_PATH</code> environment variable as follows:
+</p>
+<div class="example">
+<pre class="example">$ GUILE_LOAD_PATH="/usr/local/share/guile/site:$GUILE_LOAD_PATH" guile
+scheme@(guile-user)&gt; (use-modules (gnutls))
+scheme@(guile-user)&gt;
+</pre></div>
+
+<p>Alternatively, you can modify Guile’s <code>%load-path</code> variable
+(see <a href="https://www.gnu.org/software/guile/manual/guile.html#Build-Config">Guile’s run-time options</a> in <cite>The GNU Guile
+Reference Manual</cite>).
+</p>
+<p>At this point, you might get an error regarding
+<samp>guile-gnutls-v-2</samp> similar to:
+</p>
+<div class="example">
+<pre class="example">gnutls.scm:361:1: In procedure dynamic-link in expression (load-extension "guile-gnutls-v-2" "scm_init_gnutls"):
+gnutls.scm:361:1: file: "guile-gnutls-v-2", message: "guile-gnutls-v-2.so: cannot open shared object file: No such file or directory"
+</pre></div>
+
+<p>In this case, you will need to modify the run-time linker path, for
+example as follows:
+</p>
+<div class="example">
+<pre class="example">$ LD_LIBRARY_PATH=/usr/local/lib GUILE_LOAD_PATH=/usr/local/share/guile/site guile
+scheme@(guile-user)&gt; (use-modules (gnutls))
+scheme@(guile-user)&gt;
+</pre></div>
+
+<p>To check that you got the intended GnuTLS library version, you may
+print the version number of the loaded library as follows:
+</p>
+<div class="example">
+<pre class="example">$ guile
+scheme@(guile-user)&gt; (use-modules (gnutls))
+scheme@(guile-user)&gt; (gnutls-version)
+"3.7.8"
+scheme@(guile-user)&gt;
+</pre></div>
+
+
+<hr>
+<span id="Guile-API-Conventions"></span><div class="header">
+<p>
+Next: <a href="https://gnutls.org/manual/gnutls-guile.html#Guile-Examples" accesskey="n" rel="next">Guile Examples</a>, Previous: <a href="https://gnutls.org/manual/gnutls-guile.html#Guile-Preparations" accesskey="p" rel="prev">Guile Preparations</a>, Up: <a href="https://gnutls.org/manual/gnutls-guile.html#Top" accesskey="u" rel="up">Top</a> &nbsp; [<a href="https://gnutls.org/manual/gnutls-guile.html#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="https://gnutls.org/manual/gnutls-guile.html#Procedure-Index" title="Index" rel="index">Index</a>]</p>
+</div>
+<span id="Guile-API-Conventions-1"></span><h2 class="chapter">3 Guile API Conventions</h2>
+
+<p>This chapter details the conventions used by Guile API, as well as
+specificities of the mapping of the C API to Scheme.
+</p>
+<table class="menu" cellspacing="0" border="0">
+<tbody><tr><td valign="top" align="left">• <a href="https://gnutls.org/manual/gnutls-guile.html#Enumerates-and-Constants" accesskey="1">Enumerates and Constants</a></td><td>&nbsp;&nbsp;</td><td valign="top" align="left">Representation of C-side constants.
+</td></tr>
+<tr><td valign="top" align="left">• <a href="https://gnutls.org/manual/gnutls-guile.html#Procedure-Names" accesskey="2">Procedure Names</a></td><td>&nbsp;&nbsp;</td><td valign="top" align="left">Naming conventions.
+</td></tr>
+<tr><td valign="top" align="left">• <a href="https://gnutls.org/manual/gnutls-guile.html#Representation-of-Binary-Data" accesskey="3">Representation of Binary Data</a></td><td>&nbsp;&nbsp;</td><td valign="top" align="left">Binary data buffers.
+</td></tr>
+<tr><td valign="top" align="left">• <a href="https://gnutls.org/manual/gnutls-guile.html#Input-and-Output" accesskey="4">Input and Output</a></td><td>&nbsp;&nbsp;</td><td valign="top" align="left">Input and output.
+</td></tr>
+<tr><td valign="top" align="left">• <a href="https://gnutls.org/manual/gnutls-guile.html#Exception-Handling" accesskey="5">Exception Handling</a></td><td>&nbsp;&nbsp;</td><td valign="top" align="left">Exceptions.
+</td></tr>
+</tbody></table>
+
+<hr>
+<span id="Enumerates-and-Constants"></span><div class="header">
+<p>
+Next: <a href="https://gnutls.org/manual/gnutls-guile.html#Procedure-Names" accesskey="n" rel="next">Procedure Names</a>, Up: <a href="https://gnutls.org/manual/gnutls-guile.html#Guile-API-Conventions" accesskey="u" rel="up">Guile API Conventions</a> &nbsp; [<a href="https://gnutls.org/manual/gnutls-guile.html#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="https://gnutls.org/manual/gnutls-guile.html#Procedure-Index" title="Index" rel="index">Index</a>]</p>
+</div>
+<span id="Enumerates-and-Constants-1"></span><h3 class="section">3.1 Enumerates and Constants</h3>
+
+<span id="index-enumerate"></span>
+<span id="index-constant"></span>
+
+<p>Lots of enumerates and constants are used in the GnuTLS C API.  For
+each C enumerate type, a disjoint Scheme type is used—thus,
+enumerate values and constants are not represented by Scheme symbols
+nor by integers.  This makes it impossible to use an enumerate value
+of the wrong type on the Scheme side: such errors are automatically
+detected by type-checking.
+</p>
+<p>The enumerate values are bound to variables exported by the
+<code>(gnutls)</code> module.  These variables
+are named according to the following convention:
+</p>
+<ul>
+<li> All variable names are lower-case; the underscore <code>_</code>
+character used in the C API is replaced by hyphen <code>-</code>.
+</li><li> All variable names are prepended by the name of the enumerate
+type and the slash <code>/</code> character.
+</li><li> In some cases, the variable name is made more explicit than the
+one of the C API, e.g., by avoid abbreviations.
+</li></ul>
+
+<p>Consider for instance this C-side enumerate:
+</p>
+<div class="example">
+<pre class="example">typedef enum
+{
+  GNUTLS_CRD_CERTIFICATE = 1,
+  GNUTLS_CRD_ANON,
+  GNUTLS_CRD_SRP,
+  GNUTLS_CRD_PSK
+} gnutls_credentials_type_t;
+</pre></div>
+
+<p>The corresponding Scheme values are bound to the following variables
+exported by the <code>(gnutls)</code> module:
+</p>
+<div class="example">
+<pre class="example">credentials/certificate
+credentials/anonymous
+credentials/srp
+credentials/psk
+</pre></div>
+
+<p>Hopefully, most variable names can be deduced from this convention.
+</p>
+<p>Scheme-side “enumerate” values can be compared using <code>eq?</code>
+(see <a href="https://www.gnu.org/software/guile/manual/guile.html#Equality">equality predicates</a> in <cite>The GNU Guile Reference
+Manual</cite>).  Consider the following example:
+</p>
+<span id="index-session_002dcipher"></span>
+
+<div class="example">
+<pre class="example">(let ((session (make-session connection-end/client)))
+
+  ;;
+  ;; ...
+  ;;
+
+  ;; Check the ciphering algorithm currently used by SESSION.
+  (if (eq? cipher/arcfour (session-cipher session))
+      (format #t "We're using the ARCFOUR algorithm")))
+</pre></div>
+
+<p>In addition, all enumerate values can be converted to a human-readable
+string, in a type-specific way.  For instance, <code>(cipher-&gt;string
+cipher/arcfour)</code> yields <code>"ARCFOUR 128"</code>, while
+<code>(key-usage-&gt;string key-usage/digital-signature)</code> yields
+<code>"digital-signature"</code>.  Note that these strings may not be
+sufficient for use in a user interface since they are fairly concise
+and not internationalized.
+</p>
+
+<hr>
+<span id="Procedure-Names"></span><div class="header">
+<p>
+Next: <a href="https://gnutls.org/manual/gnutls-guile.html#Representation-of-Binary-Data" accesskey="n" rel="next">Representation of Binary Data</a>, Previous: <a href="https://gnutls.org/manual/gnutls-guile.html#Enumerates-and-Constants" accesskey="p" rel="prev">Enumerates and Constants</a>, Up: <a href="https://gnutls.org/manual/gnutls-guile.html#Guile-API-Conventions" accesskey="u" rel="up">Guile API Conventions</a> &nbsp; [<a href="https://gnutls.org/manual/gnutls-guile.html#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="https://gnutls.org/manual/gnutls-guile.html#Procedure-Index" title="Index" rel="index">Index</a>]</p>
+</div>
+<span id="Procedure-Names-1"></span><h3 class="section">3.2 Procedure Names</h3>
+
+<p>Unlike C functions in GnuTLS, the corresponding Scheme procedures are
+named in a way that is close to natural English.  Abbreviations are
+also avoided.  For instance, the Scheme procedure corresponding to
+<code>gnutls_certificate_set_dh_params</code> is named
+<code>set-certificate-credentials-dh-parameters!</code>.  The <code>gnutls_</code>
+prefix is always omitted from variable names since a similar effect
+can be achieved using Guile’s nifty binding renaming facilities,
+should it be needed (see <a href="https://www.gnu.org/software/guile/manual/guile.html#Using-Guile-Modules">Using Guile Modules</a> in <cite>The GNU
+Guile Reference Manual</cite>).
+</p>
+<p>Often Scheme procedure names differ from C function names in a way
+that makes it clearer what objects they operate on.  For example, the
+Scheme procedure named <code>set-session-transport-port!</code> corresponds
+to <code>gnutls_transport_set_ptr</code>, making it clear that this
+procedure applies to session.
+</p>
+<hr>
+<span id="Representation-of-Binary-Data"></span><div class="header">
+<p>
+Next: <a href="https://gnutls.org/manual/gnutls-guile.html#Input-and-Output" accesskey="n" rel="next">Input and Output</a>, Previous: <a href="https://gnutls.org/manual/gnutls-guile.html#Procedure-Names" accesskey="p" rel="prev">Procedure Names</a>, Up: <a href="https://gnutls.org/manual/gnutls-guile.html#Guile-API-Conventions" accesskey="u" rel="up">Guile API Conventions</a> &nbsp; [<a href="https://gnutls.org/manual/gnutls-guile.html#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="https://gnutls.org/manual/gnutls-guile.html#Procedure-Index" title="Index" rel="index">Index</a>]</p>
+</div>
+<span id="Representation-of-Binary-Data-1"></span><h3 class="section">3.3 Representation of Binary Data</h3>
+
+<p>Many procedures operate on binary data.  For instance,
+<code>pkcs3-import-dh-parameters</code> expects binary data as input.
+</p>
+<span id="index-bytevectors"></span>
+<span id="index-SRFI_002d4"></span>
+<span id="index-homogeneous-vector"></span>
+<p>Binary data is represented on the Scheme side using bytevectors
+(see <a href="https://www.gnu.org/software/guile/manual/guile.html#Bytevectors">Bytevectors</a> in <cite>The GNU Guile Reference Manual</cite>).
+Homogeneous vectors such as SRFI-4 <code>u8vector</code>s can also be
+used<a id="DOCF1" href="https://gnutls.org/manual/gnutls-guile.html#FOOT1"><sup>1</sup></a>.
+</p>
+<p>As an example, generating and then exporting Diffie-Hellman parameters
+in the PEM format can be done as follows:
+</p>
+<span id="index-make_002ddh_002dparameters"></span>
+<span id="index-pkcs3_002dexport_002ddh_002dparameters"></span>
+<span id="index-x509_002dcertificate_002dformat_002fpem"></span>
+
+<div class="example">
+<pre class="example">(let* ((dh  (make-dh-parameters 1024))
+       (pem (pkcs3-export-dh-parameters dh 
+                                        x509-certificate-format/pem)))
+  (call-with-output-file "some-file.pem"
+    (lambda (port)
+      (uniform-vector-write pem port))))
+</pre></div>
+
+
+<hr>
+<span id="Input-and-Output"></span><div class="header">
+<p>
+Next: <a href="https://gnutls.org/manual/gnutls-guile.html#Exception-Handling" accesskey="n" rel="next">Exception Handling</a>, Previous: <a href="https://gnutls.org/manual/gnutls-guile.html#Representation-of-Binary-Data" accesskey="p" rel="prev">Representation of Binary Data</a>, Up: <a href="https://gnutls.org/manual/gnutls-guile.html#Guile-API-Conventions" accesskey="u" rel="up">Guile API Conventions</a> &nbsp; [<a href="https://gnutls.org/manual/gnutls-guile.html#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="https://gnutls.org/manual/gnutls-guile.html#Procedure-Index" title="Index" rel="index">Index</a>]</p>
+</div>
+<span id="Input-and-Output-1"></span><h3 class="section">3.4 Input and Output</h3>
+
+<span id="index-set_002dsession_002dtransport_002dport_0021"></span>
+<span id="index-set_002dsession_002dtransport_002dfd_0021"></span>
+
+<p>The underlying transport of a TLS session can be any Scheme
+input/output port (see <a href="https://www.gnu.org/software/guile/manual/guile.html#Ports-and-File-Descriptors">Ports and File Descriptors</a> in <cite>The GNU
+Guile Reference Manual</cite>).  This has to be specified using
+<code>set-session-transport-port!</code>.
+</p>
+<p>However, for better performance, a raw file descriptor can be
+specified, using <code>set-session-transport-fd!</code>.  For instance, if
+the transport layer is a socket port over an OS-provided socket, you
+can use the <code>port-&gt;fdes</code> or <code>fileno</code> procedure to obtain the
+underlying file descriptor and pass it to
+<code>set-session-transport-fd!</code>  (see <a href="https://www.gnu.org/software/guile/manual/guile.html#Ports-and-File-Descriptors"><code>port-&gt;fdes</code> and <code>fileno</code></a> in <cite>The GNU Guile Reference
+Manual</cite>).  This would work as follows:
+</p>
+<div class="example">
+<pre class="example">(let ((socket (socket PF_INET SOCK_STREAM 0))
+      (session (make-session connection-end/client)))
+
+  ;;
+  ;; Establish a TCP connection...
+  ;;
+
+  ;; Use the file descriptor that underlies SOCKET.
+  (set-session-transport-fd! session (fileno socket)))
+</pre></div>
+
+<span id="index-session_002drecord_002dport"></span>
+
+<p>Once a TLS session is established, data can be communicated through it
+(i.e., <em>via</em> the TLS record layer) using the port returned by
+<code>session-record-port</code>:
+</p>
+<div class="example">
+<pre class="example">(let ((session (make-session connection-end/client)))
+
+  ;;
+  ;; Initialize the various parameters of SESSION, set up
+  ;; a network connection, etc.
+  ;;
+
+  (let ((i/o (session-record-port session)))
+    (display "Hello peer!" i/o)
+    (let ((greetings (read i/o)))
+
+      ;; …
+
+      (bye session close-request/rdwr))))
+</pre></div>
+
+<span id="index-buffering"></span>
+<p>Note that each write to the session record port leads to the
+transmission of an encrypted TLS “Application Data” packet.  In the
+above example, we create an Application Data packet for the 11 bytes for
+the string that we write.  This is not efficient both in terms of CPU
+usage and bandwidth (each packet adds at least 5 bytes of overhead and
+can lead to one <code>write</code> system call), so we recommend that
+applications do their own buffering.
+</p>
+<span id="index-record_002dsend"></span>
+<span id="index-record_002dreceive_0021"></span>
+
+<p>A lower-level I/O API is provided by <code>record-send</code> and
+<code>record-receive!</code> which take a bytevector (or a SRFI-4 vector) to
+represent the data sent or received.  While it might improve
+performance, it is much less convenient than the session record port and
+should rarely be needed.
+</p>
+
+<hr>
+<span id="Exception-Handling"></span><div class="header">
+<p>
+Previous: <a href="https://gnutls.org/manual/gnutls-guile.html#Input-and-Output" accesskey="p" rel="prev">Input and Output</a>, Up: <a href="https://gnutls.org/manual/gnutls-guile.html#Guile-API-Conventions" accesskey="u" rel="up">Guile API Conventions</a> &nbsp; [<a href="https://gnutls.org/manual/gnutls-guile.html#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="https://gnutls.org/manual/gnutls-guile.html#Procedure-Index" title="Index" rel="index">Index</a>]</p>
+</div>
+<span id="Exception-Handling-1"></span><h3 class="section">3.5 Exception Handling</h3>
+
+<span id="index-exceptions"></span>
+<span id="index-errors"></span>
+<span id="index-gnutls_002derror"></span>
+<span id="index-error_002d_003estring"></span>
+
+<p>GnuTLS errors are implemented as Scheme exceptions (see <a href="https://www.gnu.org/software/guile/manual/guile.html#Exceptions">exceptions in Guile</a> in <cite>The GNU Guile Reference Manual</cite>).  Each
+time a GnuTLS function returns an error, an exception with key
+<code>gnutls-error</code> is raised.  The additional arguments that are
+thrown include an error code and the name of the GnuTLS procedure that
+raised the exception.  The error code is pretty much like an enumerate
+value: it is one of the <code>error/</code> variables exported by the
+<code>(gnutls)</code> module (see <a href="https://gnutls.org/manual/gnutls-guile.html#Enumerates-and-Constants">Enumerates and Constants</a>).  Exceptions
+can be turned into error messages using the <code>error-&gt;string</code>
+procedure.
+</p>
+<p>The following examples illustrates how GnuTLS exceptions can be
+handled:
+</p>
+<div class="example">
+<pre class="example">(let ((session (make-session connection-end/server)))
+
+  ;;
+  ;; ...
+  ;;
+
+  (catch 'gnutls-error
+    (lambda ()
+      (handshake session))
+    (lambda (key err function . currently-unused)
+      (format (current-error-port)
+              "a GnuTLS error was raised by `~a': ~a~%"
+              function (error-&gt;string err)))))
+</pre></div>
+
+<p>Again, error values can be compared using <code>eq?</code>:
+</p>
+<div class="example">
+<pre class="example">    ;; `gnutls-error' handler.
+    (lambda (key err function . currently-unused)
+      (if (eq? err error/fatal-alert-received)
+          (format (current-error-port)
+                  "a fatal alert was caught!~%")
+          (format (current-error-port)
+                  "something bad happened: ~a~%"
+                  (error-&gt;string err))))
+</pre></div>
+
+<p>Note that the <code>catch</code> handler is currently passed only 3
+arguments but future versions might provide it with additional
+arguments.  Thus, it must be prepared to handle more than 3 arguments,
+as in this example.
+</p>
+
+<hr>
+<span id="Guile-Examples"></span><div class="header">
+<p>
+Next: <a href="https://gnutls.org/manual/gnutls-guile.html#Guile-Reference" accesskey="n" rel="next">Guile Reference</a>, Previous: <a href="https://gnutls.org/manual/gnutls-guile.html#Guile-API-Conventions" accesskey="p" rel="prev">Guile API Conventions</a>, Up: <a href="https://gnutls.org/manual/gnutls-guile.html#Top" accesskey="u" rel="up">Top</a> &nbsp; [<a href="https://gnutls.org/manual/gnutls-guile.html#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="https://gnutls.org/manual/gnutls-guile.html#Procedure-Index" title="Index" rel="index">Index</a>]</p>
+</div>
+<span id="Guile-Examples-1"></span><h2 class="chapter">4 Guile Examples</h2>
+
+<p>This chapter provides examples that illustrate common use cases.
+</p>
+<table class="menu" cellspacing="0" border="0">
+<tbody><tr><td valign="top" align="left">• <a href="https://gnutls.org/manual/gnutls-guile.html#Anonymous-Authentication-Guile-Example" accesskey="1">Anonymous Authentication Guile Example</a></td><td>&nbsp;&nbsp;</td><td valign="top" align="left">Simplest client and server.
+</td></tr>
+</tbody></table>
+
+<hr>
+<span id="Anonymous-Authentication-Guile-Example"></span><div class="header">
+<p>
+Up: <a href="https://gnutls.org/manual/gnutls-guile.html#Guile-Examples" accesskey="u" rel="up">Guile Examples</a> &nbsp; [<a href="https://gnutls.org/manual/gnutls-guile.html#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="https://gnutls.org/manual/gnutls-guile.html#Procedure-Index" title="Index" rel="index">Index</a>]</p>
+</div>
+<span id="Anonymous-Authentication-Guile-Example-1"></span><h3 class="section">4.1 Anonymous Authentication Guile Example</h3>
+
+<p><em>Anonymous authentication</em> is very easy to use.  No certificates
+are needed by the communicating parties.  Yet, it allows them to
+benefit from end-to-end encryption and integrity checks.
+</p>
+<p>The client-side code would look like this (assuming <var>some-socket</var>
+is bound to an open socket port):
+</p>
+<span id="index-connection_002dend_002fclient"></span>
+<span id="index-kx_002fanon_002ddh"></span>
+<span id="index-close_002drequest_002frdwr"></span>
+
+<div class="example">
+<pre class="example">;; Client-side.
+
+(let ((client (make-session connection-end/client)))
+  ;; Use the default settings.
+  (set-session-default-priority! client)
+
+  ;; Don't use certificate-based authentication.
+  (set-session-certificate-type-priority! client '())
+
+  ;; Request the "anonymous Diffie-Hellman" key exchange method.
+  (set-session-kx-priority! client (list kx/anon-dh))
+
+  ;; Specify the underlying socket.
+  (set-session-transport-fd! client (fileno some-socket))
+
+  ;; Create anonymous credentials.
+  (set-session-credentials! client
+                            (make-anonymous-client-credentials))
+
+  ;; Perform the TLS handshake with the server.
+  (handshake client)
+
+  ;; Send data over the TLS record layer.
+  (write "hello, world!" (session-record-port client))
+
+  ;; Terminate the TLS session.
+  (bye client close-request/rdwr))
+</pre></div>
+
+<p>The corresponding server would look like this (again, assuming
+<var>some-socket</var> is bound to a socket port):
+</p>
+<span id="index-connection_002dend_002fserver"></span>
+
+<div class="example">
+<pre class="example">;; Server-side.
+
+(let ((server (make-session connection-end/server)))
+  (set-session-default-priority! server)
+  (set-session-certificate-type-priority! server '())
+  (set-session-kx-priority! server (list kx/anon-dh))
+
+  ;; Specify the underlying transport socket.
+  (set-session-transport-fd! server (fileno some-socket))
+
+  ;; Create anonymous credentials.
+  (let ((cred (make-anonymous-server-credentials))
+        (dh-params (make-dh-parameters 1024)))
+    ;; Note: DH parameter generation can take some time.
+    (set-anonymous-server-dh-parameters! cred dh-params)
+    (set-session-credentials! server cred))
+
+  ;; Perform the TLS handshake with the client.
+  (handshake server)
+
+  ;; Receive data over the TLS record layer.
+  (let ((message (read (session-record-port server))))
+    (format #t "received the following message: ~a~%"
+            message)
+
+    (bye server close-request/rdwr)))
+</pre></div>
+
+<p>This is it!
+</p>
+
+<hr>
+<span id="Guile-Reference"></span><div class="header">
+<p>
+Next: <a href="https://gnutls.org/manual/gnutls-guile.html#Copying-Information" accesskey="n" rel="next">Copying Information</a>, Previous: <a href="https://gnutls.org/manual/gnutls-guile.html#Guile-Examples" accesskey="p" rel="prev">Guile Examples</a>, Up: <a href="https://gnutls.org/manual/gnutls-guile.html#Top" accesskey="u" rel="up">Top</a> &nbsp; [<a href="https://gnutls.org/manual/gnutls-guile.html#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="https://gnutls.org/manual/gnutls-guile.html#Procedure-Index" title="Index" rel="index">Index</a>]</p>
+</div>
+<span id="Guile-Reference-1"></span><h2 class="chapter">5 Guile Reference</h2>
+
+<p>This chapter lists the GnuTLS Scheme procedures exported by the
+<code>(gnutls)</code> module (see <a href="https://www.gnu.org/software/guile/manual/guile.html#The-Guile-module-system">The Guile module system</a> in <cite>The
+GNU Guile Reference Manual</cite>).
+</p>
+<p>(Guile not available, documentation not generated.)
+</p>
+
+<hr>
+<span id="Copying-Information"></span><div class="header">
+<p>
+Next: <a href="https://gnutls.org/manual/gnutls-guile.html#Procedure-Index" accesskey="n" rel="next">Procedure Index</a>, Previous: <a href="https://gnutls.org/manual/gnutls-guile.html#Guile-Reference" accesskey="p" rel="prev">Guile Reference</a>, Up: <a href="https://gnutls.org/manual/gnutls-guile.html#Top" accesskey="u" rel="up">Top</a> &nbsp; [<a href="https://gnutls.org/manual/gnutls-guile.html#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="https://gnutls.org/manual/gnutls-guile.html#Procedure-Index" title="Index" rel="index">Index</a>]</p>
+</div>
+<span id="Copying-Information-1"></span><h2 class="appendix">Appendix A Copying Information</h2>
+<span id="index-FDL_002c-GNU-Free-Documentation-License"></span>
+
+<span id="GNU-Free-Documentation-License"></span><h3 class="heading">GNU Free Documentation License</h3>
+
+<div align="center">Version 1.3, 3 November 2008
+</div>
+
+<div class="display">
+<pre class="display">Copyright © 2000, 2001, 2002, 2007, 2008 Free Software Foundation, Inc.
+<a href="https://fsf.org/">https://fsf.org/</a>
+
+Everyone is permitted to copy and distribute verbatim copies
+of this license document, but changing it is not allowed.
+</pre></div>
+
+<ol start="0">
+<li> PREAMBLE
+
+<p>The purpose of this License is to make a manual, textbook, or other
+functional and useful document <em>free</em> in the sense of freedom: to
+assure everyone the effective freedom to copy and redistribute it,
+with or without modifying it, either commercially or noncommercially.
+Secondarily, this License preserves for the author and publisher a way
+to get credit for their work, while not being considered responsible
+for modifications made by others.
+</p>
+<p>This License is a kind of “copyleft”, which means that derivative
+works of the document must themselves be free in the same sense.  It
+complements the GNU General Public License, which is a copyleft
+license designed for free software.
+</p>
+<p>We have designed this License in order to use it for manuals for free
+software, because free software needs free documentation: a free
+program should come with manuals providing the same freedoms that the
+software does.  But this License is not limited to software manuals;
+it can be used for any textual work, regardless of subject matter or
+whether it is published as a printed book.  We recommend this License
+principally for works whose purpose is instruction or reference.
+</p>
+</li><li> APPLICABILITY AND DEFINITIONS
+
+<p>This License applies to any manual or other work, in any medium, that
+contains a notice placed by the copyright holder saying it can be
+distributed under the terms of this License.  Such a notice grants a
+world-wide, royalty-free license, unlimited in duration, to use that
+work under the conditions stated herein.  The “Document”, below,
+refers to any such manual or work.  Any member of the public is a
+licensee, and is addressed as “you”.  You accept the license if you
+copy, modify or distribute the work in a way requiring permission
+under copyright law.
+</p>
+<p>A “Modified Version” of the Document means any work containing the
+Document or a portion of it, either copied verbatim, or with
+modifications and/or translated into another language.
+</p>
+<p>A “Secondary Section” is a named appendix or a front-matter section
+of the Document that deals exclusively with the relationship of the
+publishers or authors of the Document to the Document’s overall
+subject (or to related matters) and contains nothing that could fall
+directly within that overall subject.  (Thus, if the Document is in
+part a textbook of mathematics, a Secondary Section may not explain
+any mathematics.)  The relationship could be a matter of historical
+connection with the subject or with related matters, or of legal,
+commercial, philosophical, ethical or political position regarding
+them.
+</p>
+<p>The “Invariant Sections” are certain Secondary Sections whose titles
+are designated, as being those of Invariant Sections, in the notice
+that says that the Document is released under this License.  If a
+section does not fit the above definition of Secondary then it is not
+allowed to be designated as Invariant.  The Document may contain zero
+Invariant Sections.  If the Document does not identify any Invariant
+Sections then there are none.
+</p>
+<p>The “Cover Texts” are certain short passages of text that are listed,
+as Front-Cover Texts or Back-Cover Texts, in the notice that says that
+the Document is released under this License.  A Front-Cover Text may
+be at most 5 words, and a Back-Cover Text may be at most 25 words.
+</p>
+<p>A “Transparent” copy of the Document means a machine-readable copy,
+represented in a format whose specification is available to the
+general public, that is suitable for revising the document
+straightforwardly with generic text editors or (for images composed of
+pixels) generic paint programs or (for drawings) some widely available
+drawing editor, and that is suitable for input to text formatters or
+for automatic translation to a variety of formats suitable for input
+to text formatters.  A copy made in an otherwise Transparent file
+format whose markup, or absence of markup, has been arranged to thwart
+or discourage subsequent modification by readers is not Transparent.
+An image format is not Transparent if used for any substantial amount
+of text.  A copy that is not “Transparent” is called “Opaque”.
+</p>
+<p>Examples of suitable formats for Transparent copies include plain
+ASCII without markup, Texinfo input format, LaTeX input
+format, SGML or XML using a publicly available
+DTD, and standard-conforming simple HTML,
+PostScript or PDF designed for human modification.  Examples
+of transparent image formats include PNG, XCF and
+JPG.  Opaque formats include proprietary formats that can be
+read and edited only by proprietary word processors, SGML or
+XML for which the DTD and/or processing tools are
+not generally available, and the machine-generated HTML,
+PostScript or PDF produced by some word processors for
+output purposes only.
+</p>
+<p>The “Title Page” means, for a printed book, the title page itself,
+plus such following pages as are needed to hold, legibly, the material
+this License requires to appear in the title page.  For works in
+formats which do not have any title page as such, “Title Page” means
+the text near the most prominent appearance of the work’s title,
+preceding the beginning of the body of the text.
+</p>
+<p>The “publisher” means any person or entity that distributes copies
+of the Document to the public.
+</p>
+<p>A section “Entitled XYZ” means a named subunit of the Document whose
+title either is precisely XYZ or contains XYZ in parentheses following
+text that translates XYZ in another language.  (Here XYZ stands for a
+specific section name mentioned below, such as “Acknowledgements”,
+“Dedications”, “Endorsements”, or “History”.)  To “Preserve the Title”
+of such a section when you modify the Document means that it remains a
+section “Entitled XYZ” according to this definition.
+</p>
+<p>The Document may include Warranty Disclaimers next to the notice which
+states that this License applies to the Document.  These Warranty
+Disclaimers are considered to be included by reference in this
+License, but only as regards disclaiming warranties: any other
+implication that these Warranty Disclaimers may have is void and has
+no effect on the meaning of this License.
+</p>
+</li><li> VERBATIM COPYING
+
+<p>You may copy and distribute the Document in any medium, either
+commercially or noncommercially, provided that this License, the
+copyright notices, and the license notice saying this License applies
+to the Document are reproduced in all copies, and that you add no other
+conditions whatsoever to those of this License.  You may not use
+technical measures to obstruct or control the reading or further
+copying of the copies you make or distribute.  However, you may accept
+compensation in exchange for copies.  If you distribute a large enough
+number of copies you must also follow the conditions in section 3.
+</p>
+<p>You may also lend copies, under the same conditions stated above, and
+you may publicly display copies.
+</p>
+</li><li> COPYING IN QUANTITY
+
+<p>If you publish printed copies (or copies in media that commonly have
+printed covers) of the Document, numbering more than 100, and the
+Document’s license notice requires Cover Texts, you must enclose the
+copies in covers that carry, clearly and legibly, all these Cover
+Texts: Front-Cover Texts on the front cover, and Back-Cover Texts on
+the back cover.  Both covers must also clearly and legibly identify
+you as the publisher of these copies.  The front cover must present
+the full title with all words of the title equally prominent and
+visible.  You may add other material on the covers in addition.
+Copying with changes limited to the covers, as long as they preserve
+the title of the Document and satisfy these conditions, can be treated
+as verbatim copying in other respects.
+</p>
+<p>If the required texts for either cover are too voluminous to fit
+legibly, you should put the first ones listed (as many as fit
+reasonably) on the actual cover, and continue the rest onto adjacent
+pages.
+</p>
+<p>If you publish or distribute Opaque copies of the Document numbering
+more than 100, you must either include a machine-readable Transparent
+copy along with each Opaque copy, or state in or with each Opaque copy
+a computer-network location from which the general network-using
+public has access to download using public-standard network protocols
+a complete Transparent copy of the Document, free of added material.
+If you use the latter option, you must take reasonably prudent steps,
+when you begin distribution of Opaque copies in quantity, to ensure
+that this Transparent copy will remain thus accessible at the stated
+location until at least one year after the last time you distribute an
+Opaque copy (directly or through your agents or retailers) of that
+edition to the public.
+</p>
+<p>It is requested, but not required, that you contact the authors of the
+Document well before redistributing any large number of copies, to give
+them a chance to provide you with an updated version of the Document.
+</p>
+</li><li> MODIFICATIONS
+
+<p>You may copy and distribute a Modified Version of the Document under
+the conditions of sections 2 and 3 above, provided that you release
+the Modified Version under precisely this License, with the Modified
+Version filling the role of the Document, thus licensing distribution
+and modification of the Modified Version to whoever possesses a copy
+of it.  In addition, you must do these things in the Modified Version:
+</p>
+<ol type="A" start="1">
+<li> Use in the Title Page (and on the covers, if any) a title distinct
+from that of the Document, and from those of previous versions
+(which should, if there were any, be listed in the History section
+of the Document).  You may use the same title as a previous version
+if the original publisher of that version gives permission.
+
+</li><li> List on the Title Page, as authors, one or more persons or entities
+responsible for authorship of the modifications in the Modified
+Version, together with at least five of the principal authors of the
+Document (all of its principal authors, if it has fewer than five),
+unless they release you from this requirement.
+
+</li><li> State on the Title page the name of the publisher of the
+Modified Version, as the publisher.
+
+</li><li> Preserve all the copyright notices of the Document.
+
+</li><li> Add an appropriate copyright notice for your modifications
+adjacent to the other copyright notices.
+
+</li><li> Include, immediately after the copyright notices, a license notice
+giving the public permission to use the Modified Version under the
+terms of this License, in the form shown in the Addendum below.
+
+</li><li> Preserve in that license notice the full lists of Invariant Sections
+and required Cover Texts given in the Document’s license notice.
+
+</li><li> Include an unaltered copy of this License.
+
+</li><li> Preserve the section Entitled “History”, Preserve its Title, and add
+to it an item stating at least the title, year, new authors, and
+publisher of the Modified Version as given on the Title Page.  If
+there is no section Entitled “History” in the Document, create one
+stating the title, year, authors, and publisher of the Document as
+given on its Title Page, then add an item describing the Modified
+Version as stated in the previous sentence.
+
+</li><li> Preserve the network location, if any, given in the Document for
+public access to a Transparent copy of the Document, and likewise
+the network locations given in the Document for previous versions
+it was based on.  These may be placed in the “History” section.
+You may omit a network location for a work that was published at
+least four years before the Document itself, or if the original
+publisher of the version it refers to gives permission.
+
+</li><li> For any section Entitled “Acknowledgements” or “Dedications”, Preserve
+the Title of the section, and preserve in the section all the
+substance and tone of each of the contributor acknowledgements and/or
+dedications given therein.
+
+</li><li> Preserve all the Invariant Sections of the Document,
+unaltered in their text and in their titles.  Section numbers
+or the equivalent are not considered part of the section titles.
+
+</li><li> Delete any section Entitled “Endorsements”.  Such a section
+may not be included in the Modified Version.
+
+</li><li> Do not retitle any existing section to be Entitled “Endorsements” or
+to conflict in title with any Invariant Section.
+
+</li><li> Preserve any Warranty Disclaimers.
+</li></ol>
+
+<p>If the Modified Version includes new front-matter sections or
+appendices that qualify as Secondary Sections and contain no material
+copied from the Document, you may at your option designate some or all
+of these sections as invariant.  To do this, add their titles to the
+list of Invariant Sections in the Modified Version’s license notice.
+These titles must be distinct from any other section titles.
+</p>
+<p>You may add a section Entitled “Endorsements”, provided it contains
+nothing but endorsements of your Modified Version by various
+parties—for example, statements of peer review or that the text has
+been approved by an organization as the authoritative definition of a
+standard.
+</p>
+<p>You may add a passage of up to five words as a Front-Cover Text, and a
+passage of up to 25 words as a Back-Cover Text, to the end of the list
+of Cover Texts in the Modified Version.  Only one passage of
+Front-Cover Text and one of Back-Cover Text may be added by (or
+through arrangements made by) any one entity.  If the Document already
+includes a cover text for the same cover, previously added by you or
+by arrangement made by the same entity you are acting on behalf of,
+you may not add another; but you may replace the old one, on explicit
+permission from the previous publisher that added the old one.
+</p>
+<p>The author(s) and publisher(s) of the Document do not by this License
+give permission to use their names for publicity for or to assert or
+imply endorsement of any Modified Version.
+</p>
+</li><li> COMBINING DOCUMENTS
+
+<p>You may combine the Document with other documents released under this
+License, under the terms defined in section 4 above for modified
+versions, provided that you include in the combination all of the
+Invariant Sections of all of the original documents, unmodified, and
+list them all as Invariant Sections of your combined work in its
+license notice, and that you preserve all their Warranty Disclaimers.
+</p>
+<p>The combined work need only contain one copy of this License, and
+multiple identical Invariant Sections may be replaced with a single
+copy.  If there are multiple Invariant Sections with the same name but
+different contents, make the title of each such section unique by
+adding at the end of it, in parentheses, the name of the original
+author or publisher of that section if known, or else a unique number.
+Make the same adjustment to the section titles in the list of
+Invariant Sections in the license notice of the combined work.
+</p>
+<p>In the combination, you must combine any sections Entitled “History”
+in the various original documents, forming one section Entitled
+“History”; likewise combine any sections Entitled “Acknowledgements”,
+and any sections Entitled “Dedications”.  You must delete all
+sections Entitled “Endorsements.”
+</p>
+</li><li> COLLECTIONS OF DOCUMENTS
+
+<p>You may make a collection consisting of the Document and other documents
+released under this License, and replace the individual copies of this
+License in the various documents with a single copy that is included in
+the collection, provided that you follow the rules of this License for
+verbatim copying of each of the documents in all other respects.
+</p>
+<p>You may extract a single document from such a collection, and distribute
+it individually under this License, provided you insert a copy of this
+License into the extracted document, and follow this License in all
+other respects regarding verbatim copying of that document.
+</p>
+</li><li> AGGREGATION WITH INDEPENDENT WORKS
+
+<p>A compilation of the Document or its derivatives with other separate
+and independent documents or works, in or on a volume of a storage or
+distribution medium, is called an “aggregate” if the copyright
+resulting from the compilation is not used to limit the legal rights
+of the compilation’s users beyond what the individual works permit.
+When the Document is included in an aggregate, this License does not
+apply to the other works in the aggregate which are not themselves
+derivative works of the Document.
+</p>
+<p>If the Cover Text requirement of section 3 is applicable to these
+copies of the Document, then if the Document is less than one half of
+the entire aggregate, the Document’s Cover Texts may be placed on
+covers that bracket the Document within the aggregate, or the
+electronic equivalent of covers if the Document is in electronic form.
+Otherwise they must appear on printed covers that bracket the whole
+aggregate.
+</p>
+</li><li> TRANSLATION
+
+<p>Translation is considered a kind of modification, so you may
+distribute translations of the Document under the terms of section 4.
+Replacing Invariant Sections with translations requires special
+permission from their copyright holders, but you may include
+translations of some or all Invariant Sections in addition to the
+original versions of these Invariant Sections.  You may include a
+translation of this License, and all the license notices in the
+Document, and any Warranty Disclaimers, provided that you also include
+the original English version of this License and the original versions
+of those notices and disclaimers.  In case of a disagreement between
+the translation and the original version of this License or a notice
+or disclaimer, the original version will prevail.
+</p>
+<p>If a section in the Document is Entitled “Acknowledgements”,
+“Dedications”, or “History”, the requirement (section 4) to Preserve
+its Title (section 1) will typically require changing the actual
+title.
+</p>
+</li><li> TERMINATION
+
+<p>You may not copy, modify, sublicense, or distribute the Document
+except as expressly provided under this License.  Any attempt
+otherwise to copy, modify, sublicense, or distribute it is void, and
+will automatically terminate your rights under this License.
+</p>
+<p>However, if you cease all violation of this License, then your license
+from a particular copyright holder is reinstated (a) provisionally,
+unless and until the copyright holder explicitly and finally
+terminates your license, and (b) permanently, if the copyright holder
+fails to notify you of the violation by some reasonable means prior to
+60 days after the cessation.
+</p>
+<p>Moreover, your license from a particular copyright holder is
+reinstated permanently if the copyright holder notifies you of the
+violation by some reasonable means, this is the first time you have
+received notice of violation of this License (for any work) from that
+copyright holder, and you cure the violation prior to 30 days after
+your receipt of the notice.
+</p>
+<p>Termination of your rights under this section does not terminate the
+licenses of parties who have received copies or rights from you under
+this License.  If your rights have been terminated and not permanently
+reinstated, receipt of a copy of some or all of the same material does
+not give you any rights to use it.
+</p>
+</li><li> FUTURE REVISIONS OF THIS LICENSE
+
+<p>The Free Software Foundation may publish new, revised versions
+of the GNU Free Documentation License from time to time.  Such new
+versions will be similar in spirit to the present version, but may
+differ in detail to address new problems or concerns.  See
+<a href="https://www.gnu.org/licenses/">https://www.gnu.org/licenses/</a>.
+</p>
+<p>Each version of the License is given a distinguishing version number.
+If the Document specifies that a particular numbered version of this
+License “or any later version” applies to it, you have the option of
+following the terms and conditions either of that specified version or
+of any later version that has been published (not as a draft) by the
+Free Software Foundation.  If the Document does not specify a version
+number of this License, you may choose any version ever published (not
+as a draft) by the Free Software Foundation.  If the Document
+specifies that a proxy can decide which future versions of this
+License can be used, that proxy’s public statement of acceptance of a
+version permanently authorizes you to choose that version for the
+Document.
+</p>
+</li><li> RELICENSING
+
+<p>“Massive Multiauthor Collaboration Site” (or “MMC Site”) means any
+World Wide Web server that publishes copyrightable works and also
+provides prominent facilities for anybody to edit those works.  A
+public wiki that anybody can edit is an example of such a server.  A
+“Massive Multiauthor Collaboration” (or “MMC”) contained in the
+site means any set of copyrightable works thus published on the MMC
+site.
+</p>
+<p>“CC-BY-SA” means the Creative Commons Attribution-Share Alike 3.0
+license published by Creative Commons Corporation, a not-for-profit
+corporation with a principal place of business in San Francisco,
+California, as well as future copyleft versions of that license
+published by that same organization.
+</p>
+<p>“Incorporate” means to publish or republish a Document, in whole or
+in part, as part of another Document.
+</p>
+<p>An MMC is “eligible for relicensing” if it is licensed under this
+License, and if all works that were first published under this License
+somewhere other than this MMC, and subsequently incorporated in whole
+or in part into the MMC, (1) had no cover texts or invariant sections,
+and (2) were thus incorporated prior to November 1, 2008.
+</p>
+<p>The operator of an MMC Site may republish an MMC contained in the site
+under CC-BY-SA on the same site at any time before August 1, 2009,
+provided the MMC is eligible for relicensing.
+</p>
+</li></ol>
+
+<span id="ADDENDUM_003a-How-to-use-this-License-for-your-documents"></span><h3 class="heading">ADDENDUM: How to use this License for your documents</h3>
+
+<p>To use this License in a document you have written, include a copy of
+the License in the document and put the following copyright and
+license notices just after the title page:
+</p>
+<div class="example">
+<pre class="example">  Copyright (C)  <var>year</var>  <var>your name</var>.
+  Permission is granted to copy, distribute and/or modify this document
+  under the terms of the GNU Free Documentation License, Version 1.3
+  or any later version published by the Free Software Foundation;
+  with no Invariant Sections, no Front-Cover Texts, and no Back-Cover
+  Texts.  A copy of the license is included in the section entitled ``GNU
+  Free Documentation License''.
+</pre></div>
+
+<p>If you have Invariant Sections, Front-Cover Texts and Back-Cover Texts,
+replace the “with…Texts.” line with this:
+</p>
+<div class="example">
+<pre class="example">    with the Invariant Sections being <var>list their titles</var>, with
+    the Front-Cover Texts being <var>list</var>, and with the Back-Cover Texts
+    being <var>list</var>.
+</pre></div>
+
+<p>If you have Invariant Sections without Cover Texts, or some other
+combination of the three, merge those two alternatives to suit the
+situation.
+</p>
+<p>If your document contains nontrivial examples of program code, we
+recommend releasing these examples in parallel under your choice of
+free software license, such as the GNU General Public License,
+to permit their use in free software.
+</p>
+
+
+<hr>
+<span id="Procedure-Index"></span><div class="header">
+<p>
+Next: <a href="https://gnutls.org/manual/gnutls-guile.html#Concept-Index" accesskey="n" rel="next">Concept Index</a>, Previous: <a href="https://gnutls.org/manual/gnutls-guile.html#Copying-Information" accesskey="p" rel="prev">Copying Information</a>, Up: <a href="https://gnutls.org/manual/gnutls-guile.html#Top" accesskey="u" rel="up">Top</a> &nbsp; [<a href="https://gnutls.org/manual/gnutls-guile.html#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="https://gnutls.org/manual/gnutls-guile.html#Procedure-Index" title="Index" rel="index">Index</a>]</p>
+</div>
+<span id="Procedure-Index-1"></span><h2 class="unnumbered">Procedure Index</h2>
+
+<table><tbody><tr><th valign="top">Jump to: &nbsp; </th><td><a class="summary-letter" href="https://gnutls.org/manual/gnutls-guile.html#Procedure-Index_fn_letter-E"><b>E</b></a>
+ &nbsp; 
+<a class="summary-letter" href="https://gnutls.org/manual/gnutls-guile.html#Procedure-Index_fn_letter-M"><b>M</b></a>
+ &nbsp; 
+<a class="summary-letter" href="https://gnutls.org/manual/gnutls-guile.html#Procedure-Index_fn_letter-P"><b>P</b></a>
+ &nbsp; 
+<a class="summary-letter" href="https://gnutls.org/manual/gnutls-guile.html#Procedure-Index_fn_letter-R"><b>R</b></a>
+ &nbsp; 
+<a class="summary-letter" href="https://gnutls.org/manual/gnutls-guile.html#Procedure-Index_fn_letter-S"><b>S</b></a>
+ &nbsp; 
+</td></tr></tbody></table>
+<table class="index-fn" border="0">
+<tbody><tr><td></td><th align="left">Index Entry</th><td>&nbsp;</td><th align="left"> Section</th></tr>
+<tr><td colspan="4"> <hr></td></tr>
+<tr><th id="Procedure-Index_fn_letter-E">E</th><td></td><td></td></tr>
+<tr><td></td><td valign="top"><a href="https://gnutls.org/manual/gnutls-guile.html#index-error_002d_003estring"><code>error-&gt;string</code></a>:</td><td>&nbsp;</td><td valign="top"><a href="https://gnutls.org/manual/gnutls-guile.html#Exception-Handling">Exception Handling</a></td></tr>
+<tr><td colspan="4"> <hr></td></tr>
+<tr><th id="Procedure-Index_fn_letter-M">M</th><td></td><td></td></tr>
+<tr><td></td><td valign="top"><a href="https://gnutls.org/manual/gnutls-guile.html#index-make_002ddh_002dparameters"><code>make-dh-parameters</code></a>:</td><td>&nbsp;</td><td valign="top"><a href="https://gnutls.org/manual/gnutls-guile.html#Representation-of-Binary-Data">Representation of Binary Data</a></td></tr>
+<tr><td colspan="4"> <hr></td></tr>
+<tr><th id="Procedure-Index_fn_letter-P">P</th><td></td><td></td></tr>
+<tr><td></td><td valign="top"><a href="https://gnutls.org/manual/gnutls-guile.html#index-pkcs3_002dexport_002ddh_002dparameters"><code>pkcs3-export-dh-parameters</code></a>:</td><td>&nbsp;</td><td valign="top"><a href="https://gnutls.org/manual/gnutls-guile.html#Representation-of-Binary-Data">Representation of Binary Data</a></td></tr>
+<tr><td colspan="4"> <hr></td></tr>
+<tr><th id="Procedure-Index_fn_letter-R">R</th><td></td><td></td></tr>
+<tr><td></td><td valign="top"><a href="https://gnutls.org/manual/gnutls-guile.html#index-record_002dreceive_0021"><code>record-receive!</code></a>:</td><td>&nbsp;</td><td valign="top"><a href="https://gnutls.org/manual/gnutls-guile.html#Input-and-Output">Input and Output</a></td></tr>
+<tr><td></td><td valign="top"><a href="https://gnutls.org/manual/gnutls-guile.html#index-record_002dsend"><code>record-send</code></a>:</td><td>&nbsp;</td><td valign="top"><a href="https://gnutls.org/manual/gnutls-guile.html#Input-and-Output">Input and Output</a></td></tr>
+<tr><td colspan="4"> <hr></td></tr>
+<tr><th id="Procedure-Index_fn_letter-S">S</th><td></td><td></td></tr>
+<tr><td></td><td valign="top"><a href="https://gnutls.org/manual/gnutls-guile.html#index-session_002dcipher"><code>session-cipher</code></a>:</td><td>&nbsp;</td><td valign="top"><a href="https://gnutls.org/manual/gnutls-guile.html#Enumerates-and-Constants">Enumerates and Constants</a></td></tr>
+<tr><td></td><td valign="top"><a href="https://gnutls.org/manual/gnutls-guile.html#index-session_002drecord_002dport"><code>session-record-port</code></a>:</td><td>&nbsp;</td><td valign="top"><a href="https://gnutls.org/manual/gnutls-guile.html#Input-and-Output">Input and Output</a></td></tr>
+<tr><td></td><td valign="top"><a href="https://gnutls.org/manual/gnutls-guile.html#index-set_002dsession_002dtransport_002dfd_0021"><code>set-session-transport-fd!</code></a>:</td><td>&nbsp;</td><td valign="top"><a href="https://gnutls.org/manual/gnutls-guile.html#Input-and-Output">Input and Output</a></td></tr>
+<tr><td></td><td valign="top"><a href="https://gnutls.org/manual/gnutls-guile.html#index-set_002dsession_002dtransport_002dport_0021"><code>set-session-transport-port!</code></a>:</td><td>&nbsp;</td><td valign="top"><a href="https://gnutls.org/manual/gnutls-guile.html#Input-and-Output">Input and Output</a></td></tr>
+<tr><td colspan="4"> <hr></td></tr>
+</tbody></table>
+<table><tbody><tr><th valign="top">Jump to: &nbsp; </th><td><a class="summary-letter" href="https://gnutls.org/manual/gnutls-guile.html#Procedure-Index_fn_letter-E"><b>E</b></a>
+ &nbsp; 
+<a class="summary-letter" href="https://gnutls.org/manual/gnutls-guile.html#Procedure-Index_fn_letter-M"><b>M</b></a>
+ &nbsp; 
+<a class="summary-letter" href="https://gnutls.org/manual/gnutls-guile.html#Procedure-Index_fn_letter-P"><b>P</b></a>
+ &nbsp; 
+<a class="summary-letter" href="https://gnutls.org/manual/gnutls-guile.html#Procedure-Index_fn_letter-R"><b>R</b></a>
+ &nbsp; 
+<a class="summary-letter" href="https://gnutls.org/manual/gnutls-guile.html#Procedure-Index_fn_letter-S"><b>S</b></a>
+ &nbsp; 
+</td></tr></tbody></table>
+
+<hr>
+<span id="Concept-Index"></span><div class="header">
+<p>
+Previous: <a href="https://gnutls.org/manual/gnutls-guile.html#Procedure-Index" accesskey="p" rel="prev">Procedure Index</a>, Up: <a href="https://gnutls.org/manual/gnutls-guile.html#Top" accesskey="u" rel="up">Top</a> &nbsp; [<a href="https://gnutls.org/manual/gnutls-guile.html#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="https://gnutls.org/manual/gnutls-guile.html#Procedure-Index" title="Index" rel="index">Index</a>]</p>
+</div>
+<span id="Concept-Index-1"></span><h2 class="unnumbered">Concept Index</h2>
+
+<table><tbody><tr><th valign="top">Jump to: &nbsp; </th><td><a class="summary-letter" href="https://gnutls.org/manual/gnutls-guile.html#Concept-Index_cp_letter-B"><b>B</b></a>
+ &nbsp; 
+<a class="summary-letter" href="https://gnutls.org/manual/gnutls-guile.html#Concept-Index_cp_letter-C"><b>C</b></a>
+ &nbsp; 
+<a class="summary-letter" href="https://gnutls.org/manual/gnutls-guile.html#Concept-Index_cp_letter-E"><b>E</b></a>
+ &nbsp; 
+<a class="summary-letter" href="https://gnutls.org/manual/gnutls-guile.html#Concept-Index_cp_letter-F"><b>F</b></a>
+ &nbsp; 
+<a class="summary-letter" href="https://gnutls.org/manual/gnutls-guile.html#Concept-Index_cp_letter-G"><b>G</b></a>
+ &nbsp; 
+<a class="summary-letter" href="https://gnutls.org/manual/gnutls-guile.html#Concept-Index_cp_letter-H"><b>H</b></a>
+ &nbsp; 
+<a class="summary-letter" href="https://gnutls.org/manual/gnutls-guile.html#Concept-Index_cp_letter-S"><b>S</b></a>
+ &nbsp; 
+</td></tr></tbody></table>
+<table class="index-cp" border="0">
+<tbody><tr><td></td><th align="left">Index Entry</th><td>&nbsp;</td><th align="left"> Section</th></tr>
+<tr><td colspan="4"> <hr></td></tr>
+<tr><th id="Concept-Index_cp_letter-B">B</th><td></td><td></td></tr>
+<tr><td></td><td valign="top"><a href="https://gnutls.org/manual/gnutls-guile.html#index-buffering">buffering</a>:</td><td>&nbsp;</td><td valign="top"><a href="https://gnutls.org/manual/gnutls-guile.html#Input-and-Output">Input and Output</a></td></tr>
+<tr><td></td><td valign="top"><a href="https://gnutls.org/manual/gnutls-guile.html#index-bytevectors">bytevectors</a>:</td><td>&nbsp;</td><td valign="top"><a href="https://gnutls.org/manual/gnutls-guile.html#Representation-of-Binary-Data">Representation of Binary Data</a></td></tr>
+<tr><td colspan="4"> <hr></td></tr>
+<tr><th id="Concept-Index_cp_letter-C">C</th><td></td><td></td></tr>
+<tr><td></td><td valign="top"><a href="https://gnutls.org/manual/gnutls-guile.html#index-constant">constant</a>:</td><td>&nbsp;</td><td valign="top"><a href="https://gnutls.org/manual/gnutls-guile.html#Enumerates-and-Constants">Enumerates and Constants</a></td></tr>
+<tr><td colspan="4"> <hr></td></tr>
+<tr><th id="Concept-Index_cp_letter-E">E</th><td></td><td></td></tr>
+<tr><td></td><td valign="top"><a href="https://gnutls.org/manual/gnutls-guile.html#index-enumerate">enumerate</a>:</td><td>&nbsp;</td><td valign="top"><a href="https://gnutls.org/manual/gnutls-guile.html#Enumerates-and-Constants">Enumerates and Constants</a></td></tr>
+<tr><td></td><td valign="top"><a href="https://gnutls.org/manual/gnutls-guile.html#index-errors">errors</a>:</td><td>&nbsp;</td><td valign="top"><a href="https://gnutls.org/manual/gnutls-guile.html#Exception-Handling">Exception Handling</a></td></tr>
+<tr><td></td><td valign="top"><a href="https://gnutls.org/manual/gnutls-guile.html#index-exceptions">exceptions</a>:</td><td>&nbsp;</td><td valign="top"><a href="https://gnutls.org/manual/gnutls-guile.html#Exception-Handling">Exception Handling</a></td></tr>
+<tr><td colspan="4"> <hr></td></tr>
+<tr><th id="Concept-Index_cp_letter-F">F</th><td></td><td></td></tr>
+<tr><td></td><td valign="top"><a href="https://gnutls.org/manual/gnutls-guile.html#index-FDL_002c-GNU-Free-Documentation-License">FDL, GNU Free Documentation License</a>:</td><td>&nbsp;</td><td valign="top"><a href="https://gnutls.org/manual/gnutls-guile.html#Copying-Information">Copying Information</a></td></tr>
+<tr><td colspan="4"> <hr></td></tr>
+<tr><th id="Concept-Index_cp_letter-G">G</th><td></td><td></td></tr>
+<tr><td></td><td valign="top"><a href="https://gnutls.org/manual/gnutls-guile.html#index-gnutls_002derror"><code>gnutls-error</code></a>:</td><td>&nbsp;</td><td valign="top"><a href="https://gnutls.org/manual/gnutls-guile.html#Exception-Handling">Exception Handling</a></td></tr>
+<tr><td colspan="4"> <hr></td></tr>
+<tr><th id="Concept-Index_cp_letter-H">H</th><td></td><td></td></tr>
+<tr><td></td><td valign="top"><a href="https://gnutls.org/manual/gnutls-guile.html#index-homogeneous-vector">homogeneous vector</a>:</td><td>&nbsp;</td><td valign="top"><a href="https://gnutls.org/manual/gnutls-guile.html#Representation-of-Binary-Data">Representation of Binary Data</a></td></tr>
+<tr><td colspan="4"> <hr></td></tr>
+<tr><th id="Concept-Index_cp_letter-S">S</th><td></td><td></td></tr>
+<tr><td></td><td valign="top"><a href="https://gnutls.org/manual/gnutls-guile.html#index-SRFI_002d4">SRFI-4</a>:</td><td>&nbsp;</td><td valign="top"><a href="https://gnutls.org/manual/gnutls-guile.html#Representation-of-Binary-Data">Representation of Binary Data</a></td></tr>
+<tr><td colspan="4"> <hr></td></tr>
+</tbody></table>
+<table><tbody><tr><th valign="top">Jump to: &nbsp; </th><td><a class="summary-letter" href="https://gnutls.org/manual/gnutls-guile.html#Concept-Index_cp_letter-B"><b>B</b></a>
+ &nbsp; 
+<a class="summary-letter" href="https://gnutls.org/manual/gnutls-guile.html#Concept-Index_cp_letter-C"><b>C</b></a>
+ &nbsp; 
+<a class="summary-letter" href="https://gnutls.org/manual/gnutls-guile.html#Concept-Index_cp_letter-E"><b>E</b></a>
+ &nbsp; 
+<a class="summary-letter" href="https://gnutls.org/manual/gnutls-guile.html#Concept-Index_cp_letter-F"><b>F</b></a>
+ &nbsp; 
+<a class="summary-letter" href="https://gnutls.org/manual/gnutls-guile.html#Concept-Index_cp_letter-G"><b>G</b></a>
+ &nbsp; 
+<a class="summary-letter" href="https://gnutls.org/manual/gnutls-guile.html#Concept-Index_cp_letter-H"><b>H</b></a>
+ &nbsp; 
+<a class="summary-letter" href="https://gnutls.org/manual/gnutls-guile.html#Concept-Index_cp_letter-S"><b>S</b></a>
+ &nbsp; 
+</td></tr></tbody></table>
+
+<div class="footnote">
+<hr>
+<h4 class="footnotes-heading">Footnotes</h4>
+
+<h5><a id="FOOT1" href="https://gnutls.org/manual/gnutls-guile.html#DOCF1">(1)</a></h5>
+<p>Historically, SRFI-4 <code>u8vector</code>s are the closest
+thing to bytevectors that Guile 1.8 and earlier supported.</p>
+</div>
+<hr>
+
+
+
+
+
+</body></html>

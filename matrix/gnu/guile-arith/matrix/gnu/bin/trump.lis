@@ -1,0 +1,33 @@
+Listing of compilation of file /home/admin/guile-gdb/guile-arith/matrix/gnu/bin/trump.el
+on 2023-08-02 14:02:24 by CLISP, version 2.49.93+ (2018-02-18) (built on lcy02-amd64-055.buildd [127.0.1.1])
+;; Compiling file /home/admin/guile-gdb/guile-arith/matrix/gnu/bin/trump.el ...
+WARNING: in #:|1 31 (SETQ PROGRAM 4)-1| in lines 1..31 : PROGRAM is neither declared nor bound,
+         it will be treated as if it were declared SPECIAL.
+
+Disassembly of function #:|1 31 (SETQ PROGRAM 4)-1|
+(CONST 0) = 4
+(CONST 1) = PROGRAM
+0 required arguments
+0 optional arguments
+No rest parameter
+No keyword parameters
+writes special variable: PROGRAM
+3 byte-code instructions:
+0     (CONST 0)                           ; 4
+1     (SETVALUE 1)                        ; PROGRAM
+3     (SKIP&RET 1)
+WARNING: in #:|33 38 (SETQ DESTORY 4)-2| in lines 33..38 : DESTORY is neither declared nor bound,
+         it will be treated as if it were declared SPECIAL.
+
+Disassembly of function #:|33 38 (SETQ DESTORY 4)-2|
+(CONST 0) = 4
+(CONST 1) = DESTORY
+0 required arguments
+0 optional arguments
+No rest parameter
+No keyword parameters
+writes special variable: DESTORY
+3 byte-code instructions:
+0     (CONST 0)                           ; 4
+1     (SETVALUE 1)                        ; DESTORY
+3     (SKIP&RET 1)

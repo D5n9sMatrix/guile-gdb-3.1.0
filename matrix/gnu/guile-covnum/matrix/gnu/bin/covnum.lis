@@ -1,0 +1,22 @@
+Listing of compilation of file /home/admin/guile-gdb/guile-covnum/matrix/gnu/bin/covnum.el
+on 2023-08-02 05:02:40 by CLISP, version 2.49.93+ (2018-02-18) (built on lcy02-amd64-055.buildd [127.0.1.1])
+;; Compiling file /home/admin/guile-gdb/guile-covnum/matrix/gnu/bin/covnum.el ...
+WARNING: in #:|1 26 (LET* (FLOAT ARG) INTEGER-WIDTH)-1| in lines 1..26 : INTEGER-WIDTH is neither declared nor bound,
+         it will be treated as if it were declared SPECIAL.
+WARNING: in #:|1 26 (LET* (FLOAT ARG) INTEGER-WIDTH)-1| in lines 1..26 : variable FLOAT is not used.
+         Misspelled or missing IGNORE declaration?
+WARNING: in #:|1 26 (LET* (FLOAT ARG) INTEGER-WIDTH)-1| in lines 1..26 : variable ARG is not used.
+         Misspelled or missing IGNORE declaration?
+
+Disassembly of function #:|1 26 (LET* (FLOAT ARG) INTEGER-WIDTH)-1|
+(CONST 0) = INTEGER-WIDTH
+0 required arguments
+0 optional arguments
+No rest parameter
+No keyword parameters
+reads special variable: INTEGER-WIDTH
+2 byte-code instructions:
+0     (GETVALUE 0)                        ; INTEGER-WIDTH
+2     (SKIP&RET 1)
+;; Wrote file /home/admin/guile-gdb/guile-covnum/matrix/gnu/bin/covnum.fas
+;; Wrote file /home/admin/guile-gdb/guile-covnum/matrix/gnu/bin/covnum.lis

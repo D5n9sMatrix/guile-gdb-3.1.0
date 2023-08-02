@@ -1,0 +1,16 @@
+;; reboot GNU Introduction Reference Manual Lisp
+
+;; NAME PROJECT: guile-pl
+;; NAME PROGRAM: pl
+;; FUNC PROGRAM: lisp
+;; LANG PROGRAM: lisp
+
+;; CONSOLE: slime
+;; RUNNING: start
+
+;; START FILE ...
+;; LOADING ...
+
+(defun running (list)
+  (car (cdr list)))
+
